@@ -1,7 +1,9 @@
 {
-  "ABOUT": "About",
-  "EXPERIENCE": "Experience",
-  "PROJECTS": "Projects",
-  "CONTACT": "Contact",
-  "MY_NAME": "KOLOMIIETS YULIIA"
+  "ABOUT": "ABOUT",
+  "EXPERIENCE": "EXPERIENCE",
+  "PROJECTS": "PROJECTS",
+  "CONTACT": "CONTACT",
+  "MY_NAME": "Kolomiiets Yuliia",
+  "WEB_DEVELOPER": "Web Developer",
+  "SHORT_DESCRIPTION": "I'm focused on creating accessible and scalable web applications."
 }

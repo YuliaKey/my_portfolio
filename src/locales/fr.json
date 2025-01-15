@@ -1,7 +1,9 @@
 {
-  "ABOUT": "À propos",
-  "EXPERIENCE": "Expérience",
-  "PROJECTS": "Projets",
-  "CONTACT": "Contact",
-  "TITLE": "KOLOMIIETS YULIIA"
+  "ABOUT": "À PROPOS",
+  "EXPERIENCE": "EXPÉRIANCE",
+  "PROJECTS": "PROJETS",
+  "CONTACT": "CONTACT",
+  "TITLE": "Kolomiiets Yuliia",
+  "WEB_DEVELOPER": "Développeuse Web",
+  "SHORT_DESCRIPTION": "Je me concentre sur la création d'applications web accessibles, évolutives et conviviales."
 }

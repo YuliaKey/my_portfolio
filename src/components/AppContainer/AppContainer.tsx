@@ -1,22 +1,23 @@
 import { useTranslation } from "react-i18next";
 
-import TitleSection from "../TitleSection/TitleSection";
+import Header from "../Header/Header";
 import ContentSection from "../ContentSection/ContentSection";
 import { Container } from "./AppContainer.styles";
-import Sidebar from "../Sidebar/Sidebar";
+import NavigationList from "../NavigationList/NavigationList";
 
 const AppContainer: React.FC = () => {
   const { t }: { t: (key: string) => string } = useTranslation();
 
-  // TODO add description key + main content
+  // TODO main content
   return (
     <Container>
-      <TitleSection
+      <Header
         title={t("MY_NAME")}
-        description="A short description about me."
+        subtitle={t("WEB_DEVELOPER")}
+        description={t("SHORT_DESCRIPTION")}
       >
-        <Sidebar />
-      </TitleSection>
+        <NavigationList />
+      </Header>
       <ContentSection>Main content</ContentSection>
     </Container>
   );

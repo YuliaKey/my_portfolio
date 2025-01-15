@@ -1,7 +1,7 @@
 import { ThemeProvider } from "styled-components";
 
 import { darkTheme, GlobalStyle, lightTheme } from "./styles/theme";
-import AppContainer from "./components/AppContainer/AppContainer";
+import { AppContainer } from "@components";
 
 function App() {
   //TODO replace with state management later

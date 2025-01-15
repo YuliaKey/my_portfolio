@@ -6,7 +6,7 @@ export type IndicatorType = {
   selected?: boolean;
 };
 
-const StyledIndicator = styled.span.withConfig({
+export const StyledIndicator = styled.span.withConfig({
   shouldForwardProp: (prop) => !["selected"].includes(prop),
 })<IndicatorType>`
   display: inline-block;
@@ -21,5 +21,3 @@ const StyledIndicator = styled.span.withConfig({
     background-color: ${({ theme }) => theme.textPrimary};
   }
 `;
-
-export default StyledIndicator;

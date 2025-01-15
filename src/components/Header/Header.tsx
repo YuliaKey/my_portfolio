@@ -1,7 +1,7 @@
 import { useTheme } from "styled-components";
 
 import { HeaderContainer } from "./Header.styles";
-import Typography from "../atoms/Typography/Typography";
+import { Typography } from "../atoms/Typography/Typography";
 
 type HeaderType = {
   title: string;
@@ -10,7 +10,7 @@ type HeaderType = {
   children?: React.ReactNode;
 };
 
-const Header: React.FC<HeaderType> = ({
+export const Header: React.FC<HeaderType> = ({
   title,
   subtitle,
   description,
@@ -62,5 +62,3 @@ const Header: React.FC<HeaderType> = ({
     </HeaderContainer>
   );
 };
-
-export default Header;

@@ -1,11 +1,9 @@
 import { useTranslation } from "react-i18next";
 
-import Header from "../Header/Header";
-import ContentSection from "../ContentSection/ContentSection";
 import { Container } from "./AppContainer.styles";
-import NavigationList from "../NavigationList/NavigationList";
+import { Header, MainContent, NavigationList } from "@components";
 
-const AppContainer: React.FC = () => {
+export const AppContainer: React.FC = () => {
   const { t }: { t: (key: string) => string } = useTranslation();
 
   // TODO main content
@@ -18,9 +16,7 @@ const AppContainer: React.FC = () => {
       >
         <NavigationList />
       </Header>
-      <ContentSection>Main content</ContentSection>
+      <MainContent>Main content</MainContent>
     </Container>
   );
 };
-
-export default AppContainer;

@@ -6,13 +6,11 @@ export type ListType = {
   children: React.ReactNode;
 };
 
-const StyledList = styled.ul.withConfig({
-  shouldForwardProp: (prop) => !["margin"].includes(prop),
+export const StyledList = styled.ul.withConfig({
+  shouldForwardProp: (prop) => !["margin", "width"].includes(prop),
 })<ListType>`
   list-style: none;
   padding: 0;
   margin: ${({ margin }) => margin || "0"};
   width: ${({ width }) => width || "none"};
 `;
-
-export default StyledList;

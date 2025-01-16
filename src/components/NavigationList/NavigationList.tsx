@@ -2,15 +2,18 @@ import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useTheme } from "styled-components";
 
-import Link from "../atoms/Link/Link";
-import List from "../atoms/List/List";
-import Box from "../atoms/Box/Box";
-import Typography from "../atoms/Typography/Typography";
-import ListItem from "../atoms/ListItem/ListItem";
-import Indicator from "../atoms/Indicator/Indicator";
 import { NavigationListContainer } from "./NavigationList.styles.";
+import { Box, Indicator, Link, List, ListItem, Typography } from "@atoms";
+// import {
+//   Indicator,
+//   Typography,
+//   ListItem,
+//   Link,
+//   List,
+//   Box,
+// } from "@components/atoms";
 
-const NavigationList: React.FC = () => {
+export const NavigationList: React.FC = () => {
   const { t }: { t: (key: string) => string } = useTranslation();
   const theme = useTheme();
   const { spacing, transition } = theme;
@@ -66,5 +69,3 @@ const NavigationList: React.FC = () => {
     </NavigationListContainer>
   );
 };
-
-export default NavigationList;

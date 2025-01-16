@@ -15,7 +15,7 @@ export type BoxType = {
   ariaLabel?: string;
 };
 
-const StyledBox = styled.div.withConfig({
+export const StyledBox = styled.div.withConfig({
   shouldForwardProp: (prop) =>
     ![
       "margin",
@@ -37,5 +37,3 @@ const StyledBox = styled.div.withConfig({
   gap: ${({ gap }) => gap || "0"};
   background: ${({ background }) => background || "none"};
 `;
-
-export default StyledBox;

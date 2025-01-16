@@ -1,19 +1,12 @@
-import { ThemeProvider } from "styled-components";
-
-import { darkTheme, GlobalStyle, lightTheme } from "./styles/theme";
-import { AppContainer } from "@components";
+import "./styles/App.css";
 
 function App() {
-  //TODO replace with state management later
-  const isDarkMode = true;
-
   return (
-    <>
-      <ThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>
-        <GlobalStyle />
-        <AppContainer />
-      </ThemeProvider>
-    </>
+    <div className="App">
+      <header className="App-header">
+        <p>Portfolio app</p>
+      </header>
+    </div>
   );
 }
 

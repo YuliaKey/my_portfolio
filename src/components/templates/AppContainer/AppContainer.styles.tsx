@@ -1,0 +1,36 @@
+import styled from "styled-components";
+
+export type SpotlightProps = {
+  size?: string;
+  color?: string;
+  intensity?: string;
+  x: number;
+  y: number;
+};
+
+export const SpotlightContainer = styled.div`
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+`;
+
+export const SpotlightEffect = styled.div
+  .withConfig({
+    shouldForwardProp: (prop) =>
+      !["size", "color", "intensity", "x", "y"].includes(prop),
+  })
+  .attrs<SpotlightProps>((props) => ({
+    style: {
+      background: `radial-gradient(
+        ${props.size || "600px"} at ${props.x}px ${props.y}px,
+        ${props.color || "rgba(29, 78, 216, 0.15)"},
+        transparent ${props.intensity || "80%"}
+      )`,
+    },
+  }))<SpotlightProps>`
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  transition: background 0.3s;
+`;

@@ -16,11 +16,11 @@ describe("<Box />", () => {
       margin: "0",
       padding: "0",
       display: "block",
-      justifyContent: "flex-start",
-      alignItems: "flex-start",
-      flexDirection: "row",
-      gap: "0",
-      background: "none",
+      justifyContent: "",
+      alignItems: "",
+      flexDirection: "",
+      gap: "",
+      background: "",
     });
   });
 

@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 export type TypographyType = {
   as?: "h1" | "h2" | "h3" | "p" | "span";
-  fontWeight?: "bold" | "semiBold" | "regular";
+  fontWeight?: number;
   lineHeight?: string;
   fontSize?: string;
   letterSpacing?: string;
@@ -13,8 +13,6 @@ export type TypographyType = {
   maxWidth?: string;
   opacity?: string;
   children: React.ReactNode;
-  role?: string;
-  tabIndex?: number;
 };
 
 export const StyledTypography = styled.div.withConfig({
@@ -38,6 +36,6 @@ export const StyledTypography = styled.div.withConfig({
   color: ${({ color }) => color || "inherit"};
   margin: ${({ margin }) => margin || "0"};
   padding: ${({ padding }) => padding || "0"};
-  max-width: ${({ maxWidth }) => maxWidth || "none"};
+  max-width: ${({ maxWidth }) => maxWidth || ""};
   opacity: ${({ opacity }) => opacity || "1"};
 `;

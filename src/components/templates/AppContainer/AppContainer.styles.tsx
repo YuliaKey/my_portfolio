@@ -25,12 +25,15 @@ export const SpotlightEffect = styled.div
       background: `radial-gradient(
         ${props.size || "600px"} at ${props.x}px ${props.y}px,
         ${props.color || "rgba(29, 78, 216, 0.15)"},
-        transparent ${props.intensity || "80%"}
+        transparent ${props.intensity || "70%"}
       )`,
     },
   }))<SpotlightProps>`
   pointer-events: none;
-  position: fixed;
   inset: 0;
-  transition: background 0.3s;
+  transition-duration: .3s;
+
+  @media(min-width: 1024px) {
+    position: absolute;
+  }
 `;

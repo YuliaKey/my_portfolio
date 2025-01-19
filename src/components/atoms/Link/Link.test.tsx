@@ -1,66 +1,76 @@
-import React from "react";
 import { render, screen, fireEvent } from "@testing-library/react";
 import "@testing-library/jest-dom";
-import { ThemeContext } from "styled-components";
-import { LinkType } from "./Link.styles";
+import { ThemeProvider } from "styled-components";
+
+import { lightTheme } from "@styles";
 import { Link } from "./Link";
+import { LinkType } from "./Link.styles";
 
-const mockTheme = {
-  textPrimary: "#1F2937",
-  textSecondary: "#94A3B8",
-  transition: {
-    default: "all 0.2s ease",
-  },
-  fontWeight: {
-    bold: 700,
-    regular: 400,
-  },
-};
-
-const renderWithMockTheme = (props?: Partial<LinkType>) =>
-  render(
-    <ThemeContext.Provider value={mockTheme}>
+const renderWithTheme = (props?: Partial<LinkType>, theme = lightTheme) => {
+  return render(
+    <ThemeProvider theme={theme}>
       <Link {...props} href={props?.href || "#"}>
         Link Content
       </Link>
-    </ThemeContext.Provider>
+    </ThemeProvider>
   );
+};
 
 describe("<Link />", () => {
-  test("renders children correctly", () => {
-    renderWithMockTheme();
+  test("renders with default theme values", () => {
+    renderWithTheme();
     const link = screen.getByText("Link Content");
+
     expect(link).toBeInTheDocument();
-  });
-
-  test("applies custom padding", () => {
-    renderWithMockTheme({ padding: "10px" });
-    const link = screen.getByText("Link Content");
-
     expect(link).toHaveStyle({
-      padding: "10px",
+      padding: "0",
+      transition: "color 0.3s",
+      color: "#333333",
+      opacity: "1",
     });
   });
 
-  test("applies hover styles", () => {
-    renderWithMockTheme({
-      hoverColor: "red",
-      hoverWeight: "bold",
-      hoverOpacity: "0.9",
-    });
+  test("applies hover styles with default theme values", () => {
+    renderWithTheme();
     const link = screen.getByText("Link Content");
 
     fireEvent.mouseOver(link);
 
     expect(link).toHaveStyle({
+      color: lightTheme.textPrimary,
+      fontWeight: `${lightTheme.fontWeight.bold}`,
+      opacity: "1",
+    });
+  });
+
+  test("overrides default styles with props", () => {
+    renderWithTheme({
+      padding: "10px",
+      color: "blue",
+      opacity: "0.7",
+      hoverColor: "red",
+      hoverWeight: "600",
+      hoverOpacity: "0.9",
+    });
+    const link = screen.getByText("Link Content");
+
+    expect(link).toHaveStyle({
+      padding: "10px",
       color: "red",
-      fontWeight: "bold",
+      opacity: "0.9",
+    });
+
+    fireEvent.mouseOver(link);
+
+    expect(link).toHaveStyle({
+      color: "red",
+      fontWeight: "600",
       opacity: "0.9",
     });
   });
 
   test("renders with a valid href attribute", () => {
-    renderWithMockTheme({ href: "/test-link" });
+    renderWithTheme({ href: "/test-link" });
     const link = screen.getByText("Link Content");
 
     expect(link).toHaveAttribute("href", "/test-link");
@@ -68,11 +78,42 @@ describe("<Link />", () => {
 
   test("executes onClick handler", () => {
     const handleClick = jest.fn();
-    renderWithMockTheme({ onClick: handleClick });
+    renderWithTheme({ onClick: handleClick });
 
     const link = screen.getByText("Link Content");
     fireEvent.click(link);
 
     expect(handleClick).toHaveBeenCalledTimes(1);
+  });
+
+  test("applies focus styles with default theme values", () => {
+    renderWithTheme();
+    const link = screen.getByText("Link Content");
+
+    fireEvent.focus(link);
+
+    expect(link).toHaveStyle({
+      color: lightTheme.textPrimary,
+      fontWeight: `${lightTheme.fontWeight.bold}`,
+      opacity: "1",
+    });
+  });
+
+  test("uses theme transition if no custom value is provided", () => {
+    renderWithTheme();
+    const link = screen.getByText("Link Content");
+
+    expect(link).toHaveStyle({
+      transition: lightTheme.transition.default,
+    });
+  });
+
+  test("overrides theme transition with custom value", () => {
+    renderWithTheme({ transition: "all 0.5s ease" });
+    const link = screen.getByText("Link Content");
+
+    expect(link).toHaveStyle({
+      transition: "all 0.5s ease",
+    });
   });
 });

@@ -2,16 +2,9 @@ import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useTheme } from "styled-components";
 
-import { NavigationListContainer } from "./NavigationList.styles.";
 import { Box, Indicator, Link, List, ListItem, Typography } from "@atoms";
-// import {
-//   Indicator,
-//   Typography,
-//   ListItem,
-//   Link,
-//   List,
-//   Box,
-// } from "@components/atoms";
+
+import { NavigationListContainer } from "./NavigationList.styles.";
 
 export const NavigationList: React.FC = () => {
   const { t }: { t: (key: string) => string } = useTranslation();
@@ -51,7 +44,7 @@ export const NavigationList: React.FC = () => {
                 gap={spacing.xs}
                 padding={`${spacing.sm} 0`}
               >
-                <Indicator selected={selectedItem === index} />
+                <Indicator selected={selectedItem === index} aria-hidden />
                 <Typography
                   as="span"
                   fontSize={theme.fontSize.small}

@@ -3,7 +3,6 @@ import styled from "styled-components";
 
 export type LinkType = {
   href: string;
-  ariaLabel?: string;
   children: React.ReactNode;
   hoverColor?: string;
   hoverWeight?: string;
@@ -33,7 +32,7 @@ export const StyledLink = styled.a.withConfig({
   transition: ${({ transition, theme }) =>
     transition || theme.transition.default};
   color: ${({ color, theme }) => color || theme.textSecondary};
-  opacity: ${({ opacity }) => opacity || "0.5"};
+  opacity: ${({ opacity }) => opacity || "1"};
 
   &:hover,
   &:focus {

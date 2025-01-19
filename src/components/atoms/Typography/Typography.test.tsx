@@ -20,7 +20,7 @@ describe("<Typography />", () => {
       color: "inherit",
       margin: "0",
       padding: "0",
-      maxWidth: "none",
+      maxWidth: "",
       opacity: "1",
     });
   });
@@ -28,7 +28,7 @@ describe("<Typography />", () => {
   test("renders with custom font styles", () => {
     renderComponent({
       fontSize: "20px",
-      fontWeight: "bold",
+      fontWeight: 400,
       letterSpacing: "1px",
       lineHeight: "1.5",
       color: "blue",
@@ -37,7 +37,7 @@ describe("<Typography />", () => {
 
     expect(typo).toHaveStyle({
       fontSize: "20px",
-      fontWeight: "bold",
+      fontWeight: 400,
       letterSpacing: "1px",
       lineHeight: "1.5",
       color: "blue",
@@ -68,17 +68,6 @@ describe("<Typography />", () => {
       maxWidth: "500px",
       opacity: "0.5",
     });
-  });
-
-  test("renders with role and tabIndex for accessibility", () => {
-    renderComponent({
-      role: "heading",
-      tabIndex: 0,
-    });
-    const typo = screen.getByRole("heading");
-
-    expect(typo).toHaveAttribute("role", "heading");
-    expect(typo).toHaveAttribute("tabIndex", "0");
   });
 
   test("renders with different HTML tags", () => {

@@ -19,6 +19,9 @@ export default [
           map: [
             ["@components", "./src/components"],
             ["@atoms", "./src/components/atoms"],
+            ["@molecules", "./src/components/molecules"],
+            ["@organisms", "./src/components/organisms"],
+            ["@templates", "./src/components/templates"],
             ["@styles", "./src/styles"],
             ["@utils", "./src/utils"],
             ["@hooks", "./src/hooks"],

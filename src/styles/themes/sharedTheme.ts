@@ -2,7 +2,12 @@ import { Theme } from "./theme";
 
 export const sharedTheme: Omit<
   Theme,
-  "backgroundSecondary" | "backgroundPrimary" | "textPrimary" | "textSecondary"
+  | "backgroundSecondary"
+  | "backgroundPrimary"
+  | "backgroundTertiary"
+  | "textPrimary"
+  | "textSecondary"
+  | "textSelected"
 > = {
   fontSize: {
     h1: "3rem",
@@ -10,6 +15,7 @@ export const sharedTheme: Omit<
     h3: "1.5rem",
     body: "1rem",
     small: "0.75rem",
+    medium: "0.9rem",
   },
   fontWeight: {
     bold: 600,

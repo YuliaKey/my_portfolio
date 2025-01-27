@@ -5,6 +5,8 @@ export const lightTheme: Theme = {
   ...sharedTheme,
   backgroundPrimary: "#ffffff",
   backgroundSecondary: "#757575",
+  backgroundTertiary: "#154E5F",
   textPrimary: "#333333",
   textSecondary: "#4F4F4F",
+  textSelected: "#FFFFFF",
 };

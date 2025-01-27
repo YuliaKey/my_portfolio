@@ -5,6 +5,7 @@ export type Theme = {
     h3: string;
     body: string;
     small: string;
+    medium: string;
   };
   fontWeight: {
     bold: number;
@@ -45,6 +46,8 @@ export type Theme = {
   };
   backgroundPrimary: string;
   backgroundSecondary: string;
+  backgroundTertiary: string;
   textPrimary: string;
   textSecondary: string;
+  textSelected: string;
 };

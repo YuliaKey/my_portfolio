@@ -1,6 +1,11 @@
 import styled from "styled-components";
 
 export type BoxType = {
+  position?: string;
+  top?: string;
+  bottom?: string;
+  left?: string;
+  right?: string;
   margin?: string;
   padding?: string;
   display?: string;
@@ -19,6 +24,11 @@ export type BoxType = {
 export const StyledBox = styled.div.withConfig({
   shouldForwardProp: (prop) =>
     ![
+      "position",
+      "top",
+      "bottom",
+      "left",
+      "right",
       "margin",
       "padding",
       "background",
@@ -33,6 +43,11 @@ export const StyledBox = styled.div.withConfig({
       "minHeight",
     ].includes(prop),
 })<BoxType>`
+  position: ${({ position }) => position || ""};
+  top: ${({ top }) => top || ""};
+  bottom: ${({ bottom }) => bottom || ""};
+  left: ${({ left }) => left || ""};
+  right: ${({ right }) => right || ""};
   width: ${({ width }) => width || ""};
   height: ${({ height }) => height || ""};
   max-width: ${({ maxWidth }) => maxWidth || ""};

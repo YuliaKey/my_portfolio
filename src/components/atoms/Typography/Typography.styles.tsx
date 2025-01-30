@@ -12,6 +12,7 @@ export type TypographyType = {
   padding?: string;
   maxWidth?: string;
   opacity?: string;
+  display?: string;
   children: React.ReactNode;
 };
 
@@ -26,9 +27,11 @@ export const StyledTypography = styled.div.withConfig({
       "margin",
       "padding",
       "maxWidth",
+      "display",
       "opacity",
     ].includes(prop),
 })<TypographyType>`
+  display: ${({ display }) => display || ""};
   font-size: ${({ fontSize }) => fontSize || "inherit"};
   font-weight: ${({ fontWeight }) => fontWeight || "inherit"};
   letter-spacing: ${({ letterSpacing }) => letterSpacing || "0"};

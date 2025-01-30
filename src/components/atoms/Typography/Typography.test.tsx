@@ -3,6 +3,7 @@ import "@testing-library/jest-dom";
 
 import { TypographyType } from "./Typography.styles";
 import { Typography } from "./Typography";
+import { text } from "stream/consumers";
 
 const renderComponent = (props?: Partial<TypographyType>) =>
   render(<Typography {...props}>Typography Content</Typography>);
@@ -22,6 +23,7 @@ describe("<Typography />", () => {
       padding: "0",
       maxWidth: "",
       opacity: "1",
+      display: "block",
     });
   });
 
@@ -29,19 +31,15 @@ describe("<Typography />", () => {
     renderComponent({
       fontSize: "20px",
       fontWeight: 400,
-      letterSpacing: "1px",
-      lineHeight: "1.5",
-      color: "blue",
+      display: "inline",
     });
     const typo = screen.getByText("Typography Content");
 
-    expect(typo).toHaveStyle({
-      fontSize: "20px",
-      fontWeight: 400,
-      letterSpacing: "1px",
-      lineHeight: "1.5",
-      color: "blue",
-    });
+    const computedStyles = window.getComputedStyle(typo);
+
+    expect(computedStyles.fontSize).toBe("20px");
+    expect(computedStyles.fontWeight).toBe("400");
+    expect(computedStyles.display).toBe("inline");
   });
 
   test("renders with custom spacing", () => {

@@ -11,7 +11,7 @@ export type LinkType = {
   transition?: string;
   opacity?: string;
   hoverOpacity?: string;
-  onClick?: () => void;
+  onClick?: (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => void;
   clicked?: boolean;
 };
 

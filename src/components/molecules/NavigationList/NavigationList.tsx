@@ -13,8 +13,16 @@ export const NavigationList: React.FC = () => {
 
   const [selectedItem, setSelectedItem] = useState<number>(0);
 
-  const handleItemClick = (index: number) => {
+  const handleItemClick = (href: string, index: number) => {
     setSelectedItem(index);
+
+    const target = document.querySelector(href);
+    if (target) {
+      target.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
   };
 
   const menuItems = [
@@ -32,7 +40,10 @@ export const NavigationList: React.FC = () => {
             <Link
               href={href}
               transition={transition.fast}
-              onClick={() => handleItemClick(index)}
+              onClick={(e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+                e.preventDefault();
+                handleItemClick(href, index);
+              }}
               color={
                 selectedItem === index ? theme.textPrimary : theme.textSecondary
               }

@@ -10,7 +10,6 @@ export type SpotlightProps = {
 
 export const SpotlightContainer = styled.div`
   position: relative;
-  overflow: hidden;
   width: 100vw;
   height: 100vh;
 `;
@@ -25,7 +24,7 @@ export const SpotlightEffect = styled.div
       background: `radial-gradient(
         ${props.size || "600px"} at ${props.x}px ${props.y}px,
         ${props.color || "rgba(29, 78, 216, 0.15)"},
-        transparent ${props.intensity || "70%"}
+        transparent ${props.intensity || "80%"}
       )`,
     },
   }))<SpotlightProps>`

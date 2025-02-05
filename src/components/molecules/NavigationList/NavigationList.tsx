@@ -1,4 +1,10 @@
-import React, { useState } from "react";
+import React, {
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from "react";
 import { useTranslation } from "react-i18next";
 import { useTheme } from "styled-components";
 
@@ -12,25 +18,72 @@ export const NavigationList: React.FC = () => {
   const { spacing, transition } = theme;
 
   const [selectedItem, setSelectedItem] = useState<number>(0);
+  const isManualScroll = useRef(false);
+  const observerRef = useRef<IntersectionObserver | null>(null);
 
-  const handleItemClick = (href: string, index: number) => {
+  const menuItems = useMemo(
+    () => [
+      { href: "#about", label: t("ABOUT") },
+      { href: "#experience", label: t("EXPERIENCE") },
+      { href: "#projects", label: t("PROJECTS") },
+      { href: "#contact", label: t("CONTACT") },
+    ],
+    [t]
+  );
+
+  /**
+   * Handles click events for navigation items.
+   * Smooth scrolls to the section and disables observer temporarily.
+   */
+  const handleItemClick = useCallback((href: string, index: number) => {
     setSelectedItem(index);
+    isManualScroll.current = true;
 
-    const target = document.querySelector(href);
-    if (target) {
-      target.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-    }
-  };
+    document.querySelector(href)?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
 
-  const menuItems = [
-    { href: "#about", label: t("ABOUT") },
-    { href: "#experience", label: t("EXPERIENCE") },
-    { href: "#projects", label: t("PROJECTS") },
-    { href: "#contact", label: t("CONTACT") },
-  ];
+    setTimeout(() => {
+      isManualScroll.current = false;
+    }, 1000);
+  }, []);
+
+  /**
+   * Sets up an Intersection Observer to detect which section is currently in view.
+   */
+  useEffect(() => {
+    observerRef.current = new IntersectionObserver(
+      (entries) => {
+        if (isManualScroll.current) return;
+
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            const index = menuItems.findIndex(
+              (item) => item.href === `#${entry.target.id}`
+            );
+            if (index !== -1 && index !== selectedItem) {
+              setSelectedItem(index);
+            }
+          }
+        }
+      },
+      {
+        root: null,
+        threshold: 0.75,
+      }
+    );
+
+    const sectionElements = menuItems
+      .map(({ href }) => document.querySelector(href))
+      .filter((el): el is Element => el !== null);
+
+    sectionElements.forEach((el) => observerRef.current?.observe(el));
+
+    return () => {
+      observerRef.current?.disconnect();
+    };
+  }, [menuItems, selectedItem]);
 
   return (
     <NavigationListContainer>
@@ -47,6 +100,7 @@ export const NavigationList: React.FC = () => {
               color={
                 selectedItem === index ? theme.textPrimary : theme.textSecondary
               }
+              hoverWeight={selectedItem === index ? theme.fontWeight.bold : ""}
               opacity={selectedItem === index ? "1" : "0.5"}
             >
               <Box

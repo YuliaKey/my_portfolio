@@ -5,5 +5,27 @@
   "CONTACT": "CONTACT",
   "TITLE": "Kolomiiets Yuliia",
   "WEB_DEVELOPER": "Développeuse Web",
-  "SHORT_DESCRIPTION": "Je me concentre sur la création d'applications web accessibles, évolutives et conviviales."
+  "SHORT_DESCRIPTION": "Je me concentre sur la création d'applications web accessibles, évolutives et conviviales.",
+  "EXPERIENCES": [
+    {
+      "TITLE": "Développeuse Web (Apprentie)",
+      "COMPANY": "CMA CGM",
+      "DATE": "2023 — 2024",
+      "DESCRIPTION": "J'ai travaillé sur des applications web...",
+      "TECHNOLOGIES": ["React", "TypeScript", "JavaScript", "HTML", "CSS"]
+    },
+    {
+      "TITLE": "Ingénieure Logiciel",
+      "COMPANY": "Squad",
+      "DATE": "2023 — 2024",
+      "DESCRIPTION": "J'ai développé des solutions web évolutives...",
+      "TECHNOLOGIES": ["React", "TypeScript", "JavaScript", "HTML"]
+    }
+  ],
+  "ABOUT_PARAGRAPHS": [
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi velit leo, rutrum vel elementum eget, sodales eget ipsum. Mauris bibendum auctor odio, sed tristique tellus. Vivamus sit amet augue lobortis, rhoncus nibh a, consectetur tellus. Etiam at tincidunt est, ac facilisis diam. Suspendisse potenti. Cras metus lacus, dapibus ut pretium eu, rutrum in justo.",
+    "Nulla facilisi. Maecenas eleifend mi in risus finibus eleifend. Donec at massa scelerisque sem euismod accumsan. Mauris tristique urna in nisl pharetra, et tempor libero finibus. Suspendisse pretium molestie nisi, quis interdum felis fringilla vitae.",
+    "Nunc porttitor imperdiet sapien sit amet posuere. Integer non viverra ipsum. Donec suscipit blandit urna, vitae mattis ipsum ultricies et. Quisque volutpat turpis in aliquam condimentum.",
+    "Donec et ante magna. Donec id massa orci. Morbi viverra, dui at sodales volutpat, sem turpis placerat metus, vitae tempus mauris risus lacinia quam. Aliquam convallis mi quis accumsan egestas. Nulla id libero sit amet lectus placerat vestibulum ac eu ipsum."
+  ]
 }

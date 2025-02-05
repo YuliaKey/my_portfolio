@@ -5,5 +5,27 @@
   "CONTACT": "CONTACT",
   "MY_NAME": "Kolomiiets Yuliia",
   "WEB_DEVELOPER": "Web Developer",
-  "SHORT_DESCRIPTION": "I'm focused on creating accessible and scalable web applications."
+  "SHORT_DESCRIPTION": "I'm focused on creating accessible and scalable web applications.",
+  "EXPERIENCES": [
+    {
+      "TITLE": "Web Developer (Apprentice)",
+      "COMPANY": "CMA CGM",
+      "DATE": "2023 — 2024",
+      "DESCRIPTION": "I worked on web applications...",
+      "TECHNOLOGIES": ["React", "TypeScript", "JavaScript", "HTML", "CSS"]
+    },
+    {
+      "TITLE": "Software Engineer",
+      "COMPANY": "Squad",
+      "DATE": "2023 — 2024",
+      "DESCRIPTION": "I developed scalable web solutions...",
+      "TECHNOLOGIES": ["React", "TypeScript", "JavaScript", "HTML"]
+    }
+  ],
+  "ABOUT_PARAGRAPHS": [
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi velit leo, rutrum vel elementum eget, sodales eget ipsum. Mauris bibendum auctor odio, sed tristique tellus. Vivamus sit amet augue lobortis, rhoncus nibh a, consectetur tellus. Etiam at tincidunt est, ac facilisis diam. Suspendisse potenti. Cras metus lacus, dapibus ut pretium eu, rutrum in justo.",
+    "Nulla facilisi. Maecenas eleifend mi in risus finibus eleifend. Donec at massa scelerisque sem euismod accumsan. Mauris tristique urna in nisl pharetra, et tempor libero finibus. Suspendisse pretium molestie nisi, quis interdum felis fringilla vitae.",
+    "Nunc porttitor imperdiet sapien sit amet posuere. Integer non viverra ipsum. Donec suscipit blandit urna, vitae mattis ipsum ultricies et. Quisque volutpat turpis in aliquam condimentum.",
+    "Donec et ante magna. Donec id massa orci. Morbi viverra, dui at sodales volutpat, sem turpis placerat metus, vitae tempus mauris risus lacinia quam. Aliquam convallis mi quis accumsan egestas. Nulla id libero sit amet lectus placerat vestibulum ac eu ipsum."
+  ]
 }

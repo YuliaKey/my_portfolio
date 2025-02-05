@@ -8,9 +8,9 @@ export type Theme = {
     medium: string;
   };
   fontWeight: {
-    bold: number;
-    semiBold: number;
-    regular: number;
+    bold: string;
+    semiBold: string;
+    regular: string;
   };
   lineHeight: {
     xs: string;
@@ -44,10 +44,16 @@ export type Theme = {
     all: string;
     easeInOut: string;
   };
+  shadow: {
+    sm: string;
+  };
   backgroundPrimary: string;
   backgroundSecondary: string;
   backgroundTertiary: string;
+  backgroundQuaternary: string;
+  backgroundTag: string;
   textPrimary: string;
   textSecondary: string;
+  textTertiary: string;
   textSelected: string;
 };

@@ -38,7 +38,7 @@ describe("<Link />", () => {
 
     expect(link).toHaveStyle({
       color: lightTheme.textPrimary,
-      fontWeight: `${lightTheme.fontWeight.bold}`,
+      fontWeight: "",
       opacity: "1",
     });
   });
@@ -94,7 +94,7 @@ describe("<Link />", () => {
 
     expect(link).toHaveStyle({
       color: lightTheme.textPrimary,
-      fontWeight: `${lightTheme.fontWeight.bold}`,
+      fontWeight: "",
       opacity: "1",
     });
   });

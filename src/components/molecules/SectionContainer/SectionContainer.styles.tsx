@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const AboutContainer = styled.section`
+export const SectionWrapper = styled.section`
   scroll-margin-top: ${({ theme }) => theme.spacing.xxl};
   margin-bottom: ${({ theme }) => theme.spacing.xxl};
 
@@ -8,21 +8,20 @@ export const AboutContainer = styled.section`
     margin-bottom: 9rem;
     scroll-margin-top: ${({ theme }) => theme.spacing.xxxl};
   }
-
-  @media (min-width: 768px) {
-    margin-bottom: ${({ theme }) => theme.spacing.xxxl};
-  }
 `;
 
-export const StickyContainer = styled.div`
+export const StickyHeader = styled.div`
   position: sticky;
   top: 0;
   background-color: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(8px) brightness(1) contrast(1) grayscale(0)
+    hue-rotate(0deg) invert(0) opacity(1) saturate(1) sepia(0);
   z-index: 20;
   padding: 1.25rem 1.5rem;
   margin-bottom: 1rem;
   margin-left: -1.5rem;
   margin-right: -1.5rem;
+  width: 100vh;
 
   @media (min-width: 1024px) {
     position: relative;
@@ -34,6 +33,8 @@ export const StickyContainer = styled.div`
     margin-right: auto;
 
     &.sr-only {
+      position: absolute;
+      width: 1px;
       height: 1px;
       margin: -1px;
       overflow: hidden;

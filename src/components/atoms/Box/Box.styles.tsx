@@ -16,8 +16,14 @@ export type BoxType = {
   flexDirection?: string;
   justifyContent?: string;
   alignItems?: string;
+  flexWrap?: string;
   gap?: string;
+  gridTemplateColumns?: string;
+  gridTemplateRows?: string;
+  gridColumn?: string;
+  gridRow?: string;
   background?: string;
+  zIndex?: string;
   children: React.ReactNode;
 };
 
@@ -36,11 +42,17 @@ export const StyledBox = styled.div.withConfig({
       "justifyContent",
       "alignItems",
       "flexDirection",
+      "flexWrap",
       "gap",
+      "gridTemplateColumns",
+      "gridTemplateRows",
+      "gridColumn",
+      "gridRow",
       "width",
       "height",
       "maxWidth",
       "minHeight",
+      "zIndex",
     ].includes(prop),
 })<BoxType>`
   position: ${({ position }) => position || ""};
@@ -58,6 +70,13 @@ export const StyledBox = styled.div.withConfig({
   justify-content: ${({ justifyContent }) => justifyContent || ""};
   align-items: ${({ alignItems }) => alignItems || ""};
   flex-direction: ${({ flexDirection }) => flexDirection || ""};
+  flex-wrap: ${({ flexWrap }) => flexWrap || ""};
+  grid-template-columns: ${({ gridTemplateColumns }) =>
+    gridTemplateColumns || ""};
+  grid-template-rows: ${({ gridTemplateRows }) => gridTemplateRows || ""};
+  grid-column: ${({ gridColumn }) => gridColumn || ""};
+  grid-row: ${({ gridRow }) => gridRow || ""};
   gap: ${({ gap }) => gap || ""};
   background: ${({ background }) => background || ""};
+  z-index: ${({ zIndex }) => zIndex || ""};
 `;

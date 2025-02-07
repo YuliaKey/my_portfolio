@@ -10,8 +10,7 @@ export type SpotlightProps = {
 
 export const SpotlightContainer = styled.div`
   position: relative;
-  width: 100vw;
-  height: 100vh;
+  overflow: auto;
 `;
 
 export const SpotlightEffect = styled.div
@@ -29,10 +28,15 @@ export const SpotlightEffect = styled.div
     },
   }))<SpotlightProps>`
   pointer-events: none;
-  inset: 0;
-  transition-duration: .3s;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw; 
+  height: 100vh; 
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 30;
 
-  @media(min-width: 1024px) {
-    position: absolute;
+  @media(max-width: 1024px) {
+    display: none;
   }
 `;

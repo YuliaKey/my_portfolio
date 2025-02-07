@@ -30,7 +30,7 @@ describe("<Typography />", () => {
   test("renders with custom font styles", () => {
     renderComponent({
       fontSize: "20px",
-      fontWeight: 400,
+      fontWeight: "400",
       display: "inline",
     });
     const typo = screen.getByText("Typography Content");

@@ -34,11 +34,9 @@ export const StyledLink = styled.a.withConfig({
   color: ${({ color, theme }) => color || theme.textSecondary};
   opacity: ${({ opacity }) => opacity || "1"};
 
-  &:hover,
-  &:focus {
+  &:hover {
     color: ${({ theme, hoverColor }) => hoverColor || theme.textPrimary};
-    font-weight: ${({ theme, hoverWeight }) =>
-      hoverWeight || theme.fontWeight.bold};
+    font-weight: ${({ hoverWeight }) => hoverWeight || ""};
     opacity: ${({ hoverOpacity }) => hoverOpacity || "1"};
   }
 `;

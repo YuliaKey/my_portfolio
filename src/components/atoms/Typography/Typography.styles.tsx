@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 export type TypographyType = {
   as?: "h1" | "h2" | "h3" | "p" | "span";
-  fontWeight?: number;
+  fontWeight?: string;
   lineHeight?: string;
   fontSize?: string;
   letterSpacing?: string;

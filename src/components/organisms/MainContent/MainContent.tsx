@@ -1,6 +1,7 @@
 import React from "react";
 
-import { About, Experience } from "@molecules";
+import { About, Experience } from "@organisms";
+
 import { ContentSectionContainer } from "./MainContent.styles";
 
 type MainContentType = {

@@ -2,12 +2,15 @@ import { Theme } from "./theme";
 
 export const sharedTheme: Omit<
   Theme,
-  | "backgroundSecondary"
   | "backgroundPrimary"
+  | "backgroundSecondary"
   | "backgroundTertiary"
+  | "backgroundQuaternary"
+  | "backgroundTag"
   | "textPrimary"
   | "textSecondary"
   | "textSelected"
+  | "textTertiary"
 > = {
   fontSize: {
     h1: "3rem",
@@ -18,9 +21,9 @@ export const sharedTheme: Omit<
     medium: "0.9rem",
   },
   fontWeight: {
-    bold: 600,
-    semiBold: 500,
-    regular: 400,
+    bold: "600",
+    semiBold: "500",
+    regular: "400",
   },
   lineHeight: {
     xs: "1",
@@ -53,5 +56,8 @@ export const sharedTheme: Omit<
     slow: "color 0.5s ease-out",
     all: "all 0.15s",
     easeInOut: "ease-in-out 0.2s",
+  },
+  shadow: {
+    sm: "inset 0 1px 0 0 rgba(148, 163, 184, 0.1), 0 4px 6px rgba(0, 0, 0, 0.1)",
   },
 };

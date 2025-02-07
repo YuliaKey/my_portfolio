@@ -6,7 +6,10 @@ export const lightTheme: Theme = {
   backgroundPrimary: "#ffffff",
   backgroundSecondary: "#757575",
   backgroundTertiary: "#154E5F",
+  backgroundQuaternary: "#F9FAFB",
+  backgroundTag: "#2DD4BF19",
   textPrimary: "#333333",
   textSecondary: "#4F4F4F",
   textSelected: "#FFFFFF",
+  textTertiary: "#154E5F",
 };

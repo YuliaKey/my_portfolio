@@ -3,7 +3,6 @@ import "@testing-library/jest-dom";
 
 import { TypographyType } from "./Typography.styles";
 import { Typography } from "./Typography";
-import { text } from "stream/consumers";
 
 const renderComponent = (props?: Partial<TypographyType>) =>
   render(<Typography {...props}>Typography Content</Typography>);
@@ -72,7 +71,6 @@ describe("<Typography />", () => {
     renderComponent({ as: "h1" });
     const typo = screen.getByText("Typography Content");
 
-    // Assert the rendered tag is 'h1'
     expect(typo.tagName).toBe("H1");
   });
 });

@@ -49,6 +49,7 @@ export const StyledPaper = styled.div.withConfig({
   border-radius: ${({ borderRadius }) => borderRadius || ""};
   box-shadow: ${({ boxShadow }) => boxShadow || ""};
   padding: ${({ padding }) => padding || "0"};
+  margin: ${({ margin }) => margin || ""};
   width: ${({ width }) => width || "100%"};
   height: ${({ height }) => height || "auto"};
 

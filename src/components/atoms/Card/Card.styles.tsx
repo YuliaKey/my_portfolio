@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 import { Paper } from "../Paper/Paper";
+import { PaperType } from "../Paper/Paper.styles";
 
 export type CardType = {
   transition?: string;
@@ -20,7 +21,7 @@ export type CardType = {
 
   children: React.ReactNode;
   onClick?: () => void;
-};
+} & PaperType;
 
 export const StyledCard = styled(Paper).withConfig({
   shouldForwardProp: (prop) =>

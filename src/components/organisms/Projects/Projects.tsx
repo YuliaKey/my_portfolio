@@ -1,48 +1,46 @@
 import { useState } from "react";
-import i18n from "src/i18n";
 
 import { useTranslation } from "react-i18next";
 import { useTheme } from "styled-components";
 
-import { Arrow, Box, Link, List, ListItem, Typography } from "@atoms";
-import { ExperienceCard, SectionContainer } from "@molecules";
+import { Box, Link, List, ListItem, Typography, ArrowRight } from "@atoms";
+import { ProjectCard, SectionContainer } from "@molecules";
+import { useProjectData } from "src/data/project";
 
-import { useExperienceData } from "src/data/experience";
-
-export const Experience: React.FC = () => {
+export const Projects: React.FC = () => {
   const theme = useTheme();
 
   const { t }: { t: (key: string) => string } = useTranslation();
 
-  const cvFile =
-    i18n.language === "fr" ? "assets/resume-fr.pdf" : "assets/resume-en.pdf";
-
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
   const [isLinkHovered, setIsLinkHovered] = useState(false);
 
-  const experiences = useExperienceData();
+  const projects = useProjectData();
 
   return (
     <SectionContainer
-      id="experience"
-      ariaLabel="My work experience"
-      title={t("EXPERIENCE")}
+      id="projects"
+      ariaLabel="My personal projects"
+      title={t("PROJECTS")}
       className="sr-only"
     >
       <Box>
         <List as="ol">
-          {experiences.map(
-            ({ TITLE, COMPANY, DESCRIPTION, DATE, TECHNOLOGIES }, index) => (
+          {projects.map(
+            (
+              { NAME, DESCRIPTION, IMAGE_ALT, TECHNOLOGIES, IMAGE_SRC },
+              index
+            ) => (
               <ListItem
-                key={`${TITLE}-${index}`}
+                key={`${NAME}-${index}`}
                 margin={`0 0 ${theme.spacing.xl} 0`}
               >
-                <ExperienceCard
-                  title={TITLE}
-                  company={COMPANY}
-                  date={DATE}
+                <ProjectCard
+                  name={NAME}
                   description={DESCRIPTION}
                   technologies={TECHNOLOGIES}
+                  imageAlt={IMAGE_ALT}
+                  imageSrc={IMAGE_SRC}
                   hovered={hoveredCard === index}
                   onMouseOver={() => setHoveredCard(index)}
                   onMouseLeave={() => setHoveredCard(null)}
@@ -53,12 +51,11 @@ export const Experience: React.FC = () => {
         </List>
         <Box margin={`${theme.spacing.xl} 0 0 0`}>
           <Link
-            href={cvFile}
+            href="https://github.com/YuliaKey?tab=repositories"
             target="_blank"
             rel="noreferrer noopener"
-            aria-label={t("CV_LINK_ARIA_LABEL")}
+            aria-label={t("PROJECTS_ARCHIVE_LINK_ARIA_LABEL")}
             transition={theme.transition.smooth}
-            hoverColor={theme.textTertiary}
             color={theme.textPrimary}
             onMouseEnter={() => setIsLinkHovered(true)}
             onMouseLeave={() => setIsLinkHovered(false)}
@@ -69,10 +66,17 @@ export const Experience: React.FC = () => {
               fontWeight={theme.fontWeight.bold}
               fontSize={theme.fontSize.body}
               lineHeight={theme.lineHeight.sm}
+              padding="0 0 1.5px 0"
+              style={{
+                borderBottom: isLinkHovered
+                  ? `1px solid ${theme.textTertiary}`
+                  : "1px solid transparent",
+                transition: `${theme.transition.smooth}`,
+              }}
             >
-              {t("CV_LINK")}
+              {t("PROJECTS_ARCHIVE_LINK")}
             </Typography>
-            <Arrow className={isLinkHovered ? "hovered" : ""} />
+            <ArrowRight className={isLinkHovered ? "hovered" : ""} />
           </Link>
         </Box>
       </Box>

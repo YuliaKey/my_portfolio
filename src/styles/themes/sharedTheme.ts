@@ -56,6 +56,7 @@ export const sharedTheme: Omit<
     slow: "color 0.5s ease-out",
     all: "all 0.15s",
     easeInOut: "ease-in-out 0.2s",
+    smooth: "all 0.15s cubic-bezier(0.4, 0, 0.2, 1)",
   },
   shadow: {
     sm: "inset 0 1px 0 0 rgba(148, 163, 184, 0.1), 0 4px 6px rgba(0, 0, 0, 0.1)",

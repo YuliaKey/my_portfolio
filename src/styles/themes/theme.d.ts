@@ -43,6 +43,7 @@ export type Theme = {
     slow: string;
     all: string;
     easeInOut: string;
+    smooth: string;
   };
   shadow: {
     sm: string;

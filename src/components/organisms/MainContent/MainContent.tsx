@@ -1,6 +1,6 @@
 import React from "react";
 
-import { About, Experience } from "@organisms";
+import { About, Experience, Projects } from "@organisms";
 
 import { ContentSectionContainer } from "./MainContent.styles";
 
@@ -13,6 +13,7 @@ export const MainContent: React.FC<MainContentType> = () => {
     <ContentSectionContainer>
       <About />
       <Experience />
+      <Projects />
     </ContentSectionContainer>
   );
 };

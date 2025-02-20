@@ -1,6 +1,7 @@
 export * from "./Box/Box";
 export * from "./Card/Card";
 export * from "./Icons/Arrow/Arrow";
+export * from "./Icons/ArrowRight/ArrowRight";
 export * from "./Icons/GitHub/GitHub";
 export * from "./Icons/LinkedIn/LinkedIn";
 export * from "./Indicator/Indicator";
@@ -9,6 +10,7 @@ export * from "./LinkIcon/LinkIcon";
 export * from "./List/List";
 export * from "./ListItem/ListItem";
 export * from "./Paper/Paper";
+export * from "./ProjectImage/ProjectImage";
 export * from "./SectionHeader/SectionHeader";
 export * from "./Tag/Tag";
 export * from "./Typography/Typography";

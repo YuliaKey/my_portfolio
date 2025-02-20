@@ -7,7 +7,7 @@ export const SocialLinksList: React.FC = () => {
   const theme = useTheme();
   const socialLinks = [
     {
-      href: "https://github.com/YuliiaKey",
+      href: "https://github.com/YuliaKey",
       label: "GitHub",
       Icon: GitHub,
     },

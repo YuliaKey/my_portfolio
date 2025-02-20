@@ -1,18 +1,18 @@
 import styled from "styled-components";
 
-export const StyledArrow = styled.svg`
+export const StyledArrowRight = styled.svg`
   display: inline-block;
-  flex-shrink: 0;
-  height: 1.2rem;
-  width: 1.2rem;
+  width: 1rem;
+  height: 1rem;
   margin-left: 0.25rem;
-  transition-property: transform;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 0.15s;
+  flex-shrink: 0;
   vertical-align: middle;
+  transition-property: transform;
+  transition-duration: 0.15s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
   &.hovered {
-    transform: translate(0.25rem, -0.25rem);
+    transform: translateX(0.5rem);
   }
 
   /* Motion reduction (if user prefers reduced motion) */

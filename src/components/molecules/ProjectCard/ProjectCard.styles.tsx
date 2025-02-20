@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
-export type ExperienceCardOverlayType = {
+export type ProjectCardOverlayType = {
   hovered?: boolean;
 };
 
-export const ExperienceCardOverlay = styled.div.withConfig({
+export const ProjectCardOverlay = styled.div.withConfig({
   shouldForwardProp: (prop) => !["hovered"].includes(prop),
-})<ExperienceCardOverlayType>`
+})<ProjectCardOverlayType>`
   position: absolute;
   display: none;
   top: -1rem;

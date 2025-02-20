@@ -6,7 +6,6 @@ This project is a personal portfolio website developed using React and TypeScrip
 
 - React.js
 - TypeScript
-- CSS Modules
 
 ## Setup
 

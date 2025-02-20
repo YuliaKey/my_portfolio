@@ -10,30 +10,30 @@ import {
   Link,
   List,
   ListItem,
-  SectionHeader,
+  ProjectImage,
   Tag,
   Typography,
 } from "@atoms";
 
-import { ExperienceCardOverlay } from "./ExperienceCard.styles";
+import { ProjectCardOverlay } from "./ProjectCard.styles";
 
-export type ExperienceCardType = {
-  title: string;
+export type ProjectCardType = {
+  name: string;
   description: string;
-  company: string;
-  date: string;
   technologies: string[];
+  imageSrc: string;
+  imageAlt: string;
   hovered?: boolean;
   onMouseOver?: () => void;
   onMouseLeave?: () => void;
 };
 
-export const ExperienceCard: React.FC<ExperienceCardType> = ({
-  title,
+export const ProjectCard: React.FC<ProjectCardType> = ({
+  name,
   description,
-  company,
-  date,
   technologies,
+  imageSrc,
+  imageAlt,
   hovered,
   onMouseLeave,
   onMouseOver,
@@ -50,12 +50,15 @@ export const ExperienceCard: React.FC<ExperienceCardType> = ({
       display="grid"
       gridTemplateColumns={isSM ? "repeat(8, minmax(0, 1fr))" : ""}
       padding={`0 0 ${theme.spacing.xxxs} 0`}
-      gap={isMD ? theme.spacing.sm : isSM ? theme.spacing.lg : ""}
-      transition={isLG ? theme.transition.smooth : ""}
+      gap={isMD ? theme.spacing.sm : isSM ? theme.spacing.lg : theme.spacing.sm}
+      transition={theme.transition.smooth}
     >
-      <ExperienceCardOverlay hovered={hovered} />
-      <SectionHeader title={date} ariaLabel={date} />
-      <Box gridColumn={isSM ? "span 6/ span 6" : ""} zIndex="10">
+      <ProjectCardOverlay hovered={hovered} />
+      <Box
+        gridColumn={isSM ? "span 6/ span 6" : ""}
+        zIndex="10"
+        style={{ order: 2 }}
+      >
         <Typography
           as="h3"
           color={theme.textPrimary}
@@ -90,14 +93,7 @@ export const ExperienceCard: React.FC<ExperienceCardType> = ({
               onMouseLeave={onMouseLeave}
             />
             <Typography as="span">
-              {title} ·
-              <Typography
-                as={"span"}
-                display="inline-block"
-                padding="0 0 0 4px"
-              >
-                {company}
-              </Typography>
+              {name}
               <Arrow className={hovered ? "hovered" : ""} />
             </Typography>
           </Link>
@@ -127,6 +123,7 @@ export const ExperienceCard: React.FC<ExperienceCardType> = ({
           ))}
         </List>
       </Box>
+      <ProjectImage alt={imageAlt} src={imageSrc} hovered={hovered} />
     </Card>
   );
 };

@@ -20,9 +20,9 @@ describe("<Tag />", () => {
       `${lightTheme.spacing.xxs} ${lightTheme.spacing.xs}`
     );
     expect(computedStyles.backgroundColor).toBe(
-      hexToRgba(lightTheme.backgroundTag)
+      hexToRgba(lightTheme.color.backgroundTag)
     );
-    expect(computedStyles.color).toBe(hexToRgba(lightTheme.textTertiary));
+    expect(computedStyles.color).toBe(hexToRgba(lightTheme.color.textTertiary));
     expect(computedStyles.lineHeight).toBe(lightTheme.lineHeight.sm);
     expect(computedStyles.fontWeight).toBe(lightTheme.fontWeight.semiBold);
     expect(computedStyles.fontSize).toBe(lightTheme.fontSize.small);

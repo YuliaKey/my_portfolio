@@ -58,8 +58,8 @@ export const Experience: React.FC = () => {
             rel="noreferrer noopener"
             aria-label={t("CV_LINK_ARIA_LABEL")}
             transition={theme.transition.smooth}
-            hoverColor={theme.textTertiary}
-            color={theme.textPrimary}
+            hoverColor={theme.color.textTertiary}
+            color={theme.color.textPrimary}
             onMouseEnter={() => setIsLinkHovered(true)}
             onMouseLeave={() => setIsLinkHovered(false)}
           >

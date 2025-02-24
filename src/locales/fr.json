@@ -9,6 +9,10 @@
   "CONTACT": "CONTACT",
   "CV_LINK": "Voir le CV complet",
   "CV_LINK_ARIA_LABEL": "Voir le CV complet (S'ouvre dans un nouvel onglet) ",
+  "EMAIL": "E-mail",
+  "EMAIL_INVALID": "Adresse e-mail invalide",
+  "EMAIL_REQUIRED": "L'email est requis",
+  "ERROR_MESSAGE": "Une erreur s'est produite lors de l'envoi de votre message. Veuillez réessayer.",
   "EXPERIENCE": "EXPÉRIANCE",
   "EXPERIENCES": [
     {
@@ -26,6 +30,12 @@
       "TECHNOLOGIES": ["React", "TypeScript", "JavaScript", "HTML"]
     }
   ],
+  "FULL_NAME": "Nom et prénom",
+  "MESSAGE_MIN": "Le message doit contenir au moins 100 caractères",
+  "MESSAGE_MAX": "Le message doit contenir au maximum 1000 caractères",
+  "MESSAGE_REQUIRED": "Le message ne peut pas être vide",
+  "MY_NAME": "Kolomiiets Yuliia",
+  "NAME_REQUIRED": "Le nom est requis",
   "PROJECTS": "PROJETS",
   "PROJECTS_LIST": [
     {
@@ -43,8 +53,10 @@
   ],
   "PROJECTS_ARCHIVE_LINK": "Voir l'Archive Complète des Projets",
   "PROJECTS_ARCHIVE_LINK_ARIA_LABEL": "Voir l'archive complète des projets (s'ouvre dans un nouvel onglet)",
+  "SEND": "Envoyer le message",
   "SHORT_DESCRIPTION": "Je me concentre sur la création d'applications web accessibles, évolutives et conviviales.",
+  "SUCCESS_MESSAGE": "Merci pour votre message. Il a été envoyé avec succès !",
   "TITLE": "Kolomiiets Yuliia",
-  "WEB_DEVELOPER": "Développeuse Web"
-
+  "WEB_DEVELOPER": "Développeuse Web",
+  "YOUR_MESSAGE": "Votre message"
 }

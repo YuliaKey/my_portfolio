@@ -56,7 +56,7 @@ export const Projects: React.FC = () => {
             rel="noreferrer noopener"
             aria-label={t("PROJECTS_ARCHIVE_LINK_ARIA_LABEL")}
             transition={theme.transition.smooth}
-            color={theme.textPrimary}
+            color={theme.color.textPrimary}
             onMouseEnter={() => setIsLinkHovered(true)}
             onMouseLeave={() => setIsLinkHovered(false)}
           >
@@ -69,7 +69,7 @@ export const Projects: React.FC = () => {
               padding="0 0 1.5px 0"
               style={{
                 borderBottom: isLinkHovered
-                  ? `1px solid ${theme.textTertiary}`
+                  ? `1px solid ${theme.color.textTertiary}`
                   : "1px solid transparent",
                 transition: `${theme.transition.smooth}`,
               }}

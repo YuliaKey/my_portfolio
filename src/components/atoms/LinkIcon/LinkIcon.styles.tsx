@@ -17,11 +17,11 @@ export const StyledLinkIcon = styled.a.withConfig({
     ].includes(prop),
 })<LinkIconType>`
   text-decoration: none;
-  color: ${({ theme }) => theme.textSecondary};
+  color: ${({ theme }) => theme.color.textSecondary};
   transition: ${({ theme }) => theme.transition.easeInOut};
 
   &:hover {
-    color: ${({ theme }) => theme.textPrimary};
+    color: ${({ theme }) => theme.color.textPrimary};
   }
 
   .sr-only {

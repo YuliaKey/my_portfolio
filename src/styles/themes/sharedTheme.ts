@@ -1,17 +1,6 @@
 import { Theme } from "./theme";
 
-export const sharedTheme: Omit<
-  Theme,
-  | "backgroundPrimary"
-  | "backgroundSecondary"
-  | "backgroundTertiary"
-  | "backgroundQuaternary"
-  | "backgroundTag"
-  | "textPrimary"
-  | "textSecondary"
-  | "textSelected"
-  | "textTertiary"
-> = {
+export const sharedTheme: Omit<Theme, "color"> = {
   fontSize: {
     h1: "3rem",
     h2: "1.25rem",

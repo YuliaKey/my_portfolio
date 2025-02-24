@@ -27,7 +27,7 @@ export const About: React.FC = () => {
           as="p"
           fontSize={theme.fontSize.body}
           lineHeight={theme.lineHeight.md}
-          color={theme.textSecondary}
+          color={theme.color.textSecondary}
           margin={index !== paragraphs.length - 1 ? "0 0 1rem 0" : "0"}
         >
           {paragraph}

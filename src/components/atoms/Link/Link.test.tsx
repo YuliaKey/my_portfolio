@@ -37,7 +37,7 @@ describe("<Link />", () => {
     fireEvent.mouseOver(link);
 
     expect(link).toHaveStyle({
-      color: lightTheme.textPrimary,
+      color: lightTheme.color.textPrimary,
       fontWeight: "",
       opacity: "1",
     });
@@ -93,7 +93,7 @@ describe("<Link />", () => {
     fireEvent.focus(link);
 
     expect(link).toHaveStyle({
-      color: lightTheme.textPrimary,
+      color: lightTheme.color.textPrimary,
       fontWeight: "",
       opacity: "1",
     });

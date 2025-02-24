@@ -24,6 +24,6 @@ export const StyledProjectImage = styled.img.withConfig({
   }
 
   .hovered & {
-    border-color: ${({ theme }) => theme.textPrimary};
+    border-color: ${({ theme }) => theme.color.textPrimary};
   }
 `;

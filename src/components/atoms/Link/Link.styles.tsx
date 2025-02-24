@@ -31,11 +31,11 @@ export const StyledLink = styled.a.withConfig({
   padding: ${({ padding }) => padding || "0"};
   transition: ${({ transition, theme }) =>
     transition || theme.transition.default};
-  color: ${({ color, theme }) => color || theme.textSecondary};
+  color: ${({ color, theme }) => color || theme.color.textSecondary};
   opacity: ${({ opacity }) => opacity || "1"};
 
   &:hover {
-    color: ${({ theme, hoverColor }) => hoverColor || theme.textPrimary};
+    color: ${({ theme, hoverColor }) => hoverColor || theme.color.textPrimary};
     font-weight: ${({ hoverWeight }) => hoverWeight || ""};
     opacity: ${({ hoverOpacity }) => hoverOpacity || "1"};
   }

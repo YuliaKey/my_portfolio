@@ -48,13 +48,17 @@ export type Theme = {
   shadow: {
     sm: string;
   };
-  backgroundPrimary: string;
-  backgroundSecondary: string;
-  backgroundTertiary: string;
-  backgroundQuaternary: string;
-  backgroundTag: string;
-  textPrimary: string;
-  textSecondary: string;
-  textTertiary: string;
-  textSelected: string;
+  color: {
+    textPrimary: string;
+    textSecondary: string;
+    textTertiary: string;
+    textSelected: string;
+    backgroundPrimary: string;
+    backgroundSecondary: string;
+    backgroundTertiary: string;
+    backgroundQuaternary: string;
+    backgroundTag: string;
+    success: string;
+    error: string;
+  };
 };

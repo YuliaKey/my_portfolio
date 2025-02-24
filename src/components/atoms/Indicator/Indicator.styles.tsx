@@ -13,11 +13,11 @@ export const StyledIndicator = styled.span.withConfig({
   width: ${({ selected }) => (selected ? "4rem" : "2rem")};
   height: 1px;
   background-color: ${({ selected, theme }) =>
-    selected ? theme.textPrimary : theme.textSecondary};
+    selected ? theme.color.textPrimary : theme.color.textSecondary};
   transition: ${({ theme }) => theme.transition.all};
 
   ${StyledLink}:hover & {
     width: 4rem;
-    background-color: ${({ theme }) => theme.textPrimary};
+    background-color: ${({ theme }) => theme.color.textPrimary};
   }
 `;

@@ -22,19 +22,19 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   ::selection {
-    background: ${(props) => props.theme.backgroundTertiary}; 
-    color: ${(props) => props.theme.textSelected}; 
+    background: ${(props) => props.theme.color.backgroundTertiary}; 
+    color: ${(props) => props.theme.color.textSelected}; 
   }
 
   /* For cross-browser support */
   ::-moz-selection {
-    background: ${(props) => props.theme.textPrimary};
-    color: ${(props) => props.theme.backgroundPrimary};
+    background: ${(props) => props.theme.color.textPrimary};
+    color: ${(props) => props.theme.color.backgroundPrimary};
   }
 
   body {
-    background-color: ${(props) => props.theme.backgroundPrimary};
-    color: ${(props) => props.theme.textPrimary};
+    background-color: ${(props) => props.theme.color.backgroundPrimary};
+    color: ${(props) => props.theme.color.textPrimary};
     -webkit-font-smoothing: antialiased;
     line-height: 1.625;
     margin: 0;

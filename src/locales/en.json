@@ -9,6 +9,11 @@
   "CONTACT": "CONTACT",
   "CV_LINK": "View Full Résumé",
   "CV_LINK_ARIA_LABEL": "View Full Résumé (Opens in a new tab)",
+  "EMAIL": "E-mail",
+  "EMAIL_INVALID": "Invalid email address",
+  "EMAIL_REQUIRED": "Email is required",
+  "ERROR_MESSAGE": "An error occurred while sending your message. Please try again.",
+
   "EXPERIENCE": "EXPERIENCE",
   "EXPERIENCES": [
     {
@@ -26,7 +31,12 @@
       "TECHNOLOGIES": ["React", "TypeScript", "JavaScript", "HTML"]
     }
   ],
+  "FULL_NAME": "Full name",
+  "MESSAGE_MAX": "Message must be at most 1000 characters long",
+  "MESSAGE_MIN": "Message must be at least 100 characters long",
+  "MESSAGE_REQUIRED": "Message cannot be empty",
   "MY_NAME": "Kolomiiets Yuliia",
+  "NAME_REQUIRED": "Name is required",
   "PROJECTS": "PROJECTS",
   "PROJECTS_LIST": [
     {
@@ -44,6 +54,9 @@
   ],
   "PROJECTS_ARCHIVE_LINK": "View Full Project Archive",
   "PROJECTS_ARCHIVE_LINK_ARIA_LABEL": "View Full Project Archive (Opens in a new tab)",
+  "SEND": "Send message",
   "SHORT_DESCRIPTION": "I'm focused on creating accessible and scalable web applications.",
-  "WEB_DEVELOPER": "Web Developer"
+  "SUCCESS_MESSAGE": "Thank you for your message. It has been sent successfully!",
+  "WEB_DEVELOPER": "Web Developer",
+  "YOUR_MESSAGE": "Your message"
 }

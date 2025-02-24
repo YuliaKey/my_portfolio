@@ -98,7 +98,9 @@ export const NavigationList: React.FC = () => {
                 handleItemClick(href, index);
               }}
               color={
-                selectedItem === index ? theme.textPrimary : theme.textSecondary
+                selectedItem === index
+                  ? theme.color.textPrimary
+                  : theme.color.textSecondary
               }
               hoverWeight={selectedItem === index ? theme.fontWeight.bold : ""}
               opacity={selectedItem === index ? "1" : "0.5"}

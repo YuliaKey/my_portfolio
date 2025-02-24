@@ -9,12 +9,12 @@ export const SocialLinkItem = styled.li`
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    color: ${({ theme }) => theme.textSecondary};
+    color: ${({ theme }) => theme.color.textSecondary};
     text-decoration: none;
     transition: color ${({ theme }) => theme.transition.fast};
 
     &:hover {
-      color: ${({ theme }) => theme.textPrimary};
+      color: ${({ theme }) => theme.color.textPrimary};
     }
 
     svg {

@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const StyledSectionHeader = styled.header`
   margin-bottom: ${({ theme }) => theme.spacing.xxs};
   margin-top: ${({ theme }) => theme.spacing.xxxs};
-  color: ${({ theme }) => theme.textSecondary};
+  color: ${({ theme }) => theme.color.textSecondary};
   letter-spacing: ${({ theme }) => theme.letterSpacing.xxs};
   font-weight: ${({ theme }) => theme.fontWeight.bold};
   font-size: ${({ theme }) => theme.fontSize.small};

@@ -27,9 +27,9 @@ export const StyledTag = styled.span.withConfig({
   padding: ${({ padding, theme }) =>
     padding || `${theme.spacing.xxs} ${theme.spacing.xs}`};
   background-color: ${({ backgroundColor, theme }) =>
-    backgroundColor || theme.backgroundTag};
+    backgroundColor || theme.color.backgroundTag};
   border-radius: ${({ borderRadius }) => borderRadius || "9999px"};
-  color: ${({ color, theme }) => color || theme.textTertiary};
+  color: ${({ color, theme }) => color || theme.color.textTertiary};
   line-height: ${({ lineHeight, theme }) => lineHeight || theme.lineHeight.sm};
   font-weight: ${({ fontWeight, theme }) =>
     fontWeight || theme.fontWeight.semiBold};

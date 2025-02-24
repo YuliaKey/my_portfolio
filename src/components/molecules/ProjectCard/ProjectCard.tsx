@@ -61,7 +61,7 @@ export const ProjectCard: React.FC<ProjectCardType> = ({
       >
         <Typography
           as="h3"
-          color={theme.textPrimary}
+          color={theme.color.textPrimary}
           fontSize={theme.fontSize.body}
           fontWeight={theme.fontWeight.semiBold}
           letterSpacing={theme.letterSpacing.sm}
@@ -72,8 +72,8 @@ export const ProjectCard: React.FC<ProjectCardType> = ({
             target="_blank"
             rel="noreferrer noopener"
             aria-label="CMA CGM (opens in a new tab)"
-            hoverColor={theme.textTertiary}
-            color={theme.textPrimary}
+            hoverColor={theme.color.textTertiary}
+            color={theme.color.textPrimary}
             style={{
               display: "inline-flex",
               alignItems: "baseline",
@@ -104,7 +104,7 @@ export const ProjectCard: React.FC<ProjectCardType> = ({
           lineHeight={theme.lineHeight.md}
           margin={`${theme.spacing.xxs} 0 0 0`}
           fontWeight={theme.fontWeight.regular}
-          color={theme.textSecondary}
+          color={theme.color.textSecondary}
         >
           {description}
         </Typography>

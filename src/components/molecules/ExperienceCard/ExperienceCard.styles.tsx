@@ -17,7 +17,7 @@ export const ExperienceCardOverlay = styled.div.withConfig({
   border-radius: 0.375rem;
   transition: ${({ theme }) => theme.transition.smooth};
   background-color: ${({ hovered, theme }) =>
-    hovered ? theme.backgroundQuaternary : ""};
+    hovered ? theme.color.backgroundQuaternary : ""};
   box-shadow: ${({ hovered, theme }) => (hovered ? theme.shadow.sm : "")};
 
   @media (min-width: 1024px) {

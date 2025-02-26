@@ -2,9 +2,14 @@ import { useTranslation } from "react-i18next";
 import { useTheme } from "styled-components";
 
 import { Box, Link, Typography } from "@atoms";
+import {
+  NavigationList,
+  SocialLinksList,
+  ThemeToggle,
+  LanguageToggle,
+} from "@molecules";
 
 import { HeaderContainer } from "./Header.styles";
-import { NavigationList, SocialLinksList } from "@molecules";
 
 export const Header: React.FC = () => {
   const {
@@ -55,9 +60,21 @@ export const Header: React.FC = () => {
         >
           {t("SHORT_DESCRIPTION")}
         </Typography>
+        <SocialLinksList />
+
         <NavigationList />
       </Box>
-      <SocialLinksList />
+      <Box
+        display="flex"
+        flexDirection="row"
+        gap={spacing.sm}
+        alignItems="center"
+        justifyContent="flex-start"
+        margin={`${spacing.lg} 0 0 0`}
+      >
+        <ThemeToggle />
+        <LanguageToggle />
+      </Box>
     </HeaderContainer>
   );
 };

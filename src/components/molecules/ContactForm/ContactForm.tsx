@@ -80,6 +80,7 @@ export const ContactForm = () => {
             fontSize={theme.fontSize.body}
             fontWeight={theme.fontWeight.regular}
             margin={`${theme.spacing.xxs} 0 0 0`}
+            letterSpacing={theme.letterSpacing.xs}
           >
             {errors.name.message}
           </Typography>
@@ -110,6 +111,7 @@ export const ContactForm = () => {
             fontSize={theme.fontSize.body}
             fontWeight={theme.fontWeight.regular}
             margin={`${theme.spacing.xxs} 0 0 0`}
+            letterSpacing={theme.letterSpacing.xs}
           >
             {errors.email.message}
           </Typography>
@@ -142,6 +144,7 @@ export const ContactForm = () => {
             fontSize={theme.fontSize.body}
             fontWeight={theme.fontWeight.regular}
             color={theme.color.error}
+            letterSpacing={theme.letterSpacing.xs}
           >
             {errors.message.message}
           </Typography>
@@ -162,6 +165,7 @@ export const ContactForm = () => {
           fontSize={theme.fontSize.body}
           fontWeight={theme.fontWeight.regular}
           color={theme.color.textTertiary}
+          letterSpacing={theme.letterSpacing.xs}
         >
           {status}
         </Typography>

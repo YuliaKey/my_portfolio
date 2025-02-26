@@ -25,7 +25,7 @@ describe("<Link />", () => {
     expect(link).toHaveStyle({
       padding: "0",
       transition: "color 0.3s",
-      color: "#333333",
+      color: lightTheme.color.textPrimary,
       opacity: "1",
     });
   });

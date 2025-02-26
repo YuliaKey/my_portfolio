@@ -15,6 +15,7 @@ export const StyledButton = styled.button.withConfig({
     disabled ? theme.color.textSecondary : theme.color.textPrimary};
   font-size: ${({ theme }) => theme.fontSize.body};
   font-weight: ${({ theme }) => theme.fontWeight.regular};
+  letter-spacing: ${({ theme }) => theme.letterSpacing.xs};
   border: 1px solid
     ${({ theme, disabled }) =>
       disabled ? theme.color.textSecondary : theme.color.textPrimary};

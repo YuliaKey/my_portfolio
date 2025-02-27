@@ -14,11 +14,12 @@ export const StyledTextArea = styled.textarea.withConfig({
       hasError ? theme.color.error : theme.color.textSecondary};
   border-radius: 3px;
   resize: none;
-  height: 150px;
+  min-height: 250px;
   background-color: transparent;
   color: ${({ theme }) => theme.color.textPrimary};
   font-size: ${({ theme }) => theme.fontSize.body};
   font-weight: ${({ theme }) => theme.fontWeight.regular};
+  letter-spacing: ${({ theme }) => theme.letterSpacing.xxs};
 
   &:hover,
   &:focus {

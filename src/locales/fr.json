@@ -56,7 +56,8 @@
   "SEND": "Envoyer le message",
   "SHORT_DESCRIPTION": "Je me concentre sur la création d'applications web accessibles, évolutives et conviviales.",
   "SUCCESS_MESSAGE": "Merci pour votre message. Il a été envoyé avec succès !",
-  "TITLE": "Kolomiiets Yuliia",
+  "TOGGLE_MODE": "Basculer le mode sombre / clair",
+  "TOGGLE_LANGUAGE": "Changer de langue (anglais / français)",
   "WEB_DEVELOPER": "Développeuse Web",
   "YOUR_MESSAGE": "Votre message"
 }

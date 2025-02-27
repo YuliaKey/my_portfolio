@@ -57,6 +57,8 @@
   "SEND": "Send message",
   "SHORT_DESCRIPTION": "I'm focused on creating accessible and scalable web applications.",
   "SUCCESS_MESSAGE": "Thank you for your message. It has been sent successfully!",
+  "TOGGLE_MODE": "Toggle dark/light mode",
+  "TOGGLE_LANGUAGE": "Toggle language (English/French)",
   "WEB_DEVELOPER": "Web Developer",
   "YOUR_MESSAGE": "Your message"
 }

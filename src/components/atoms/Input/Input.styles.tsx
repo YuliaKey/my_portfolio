@@ -17,6 +17,7 @@ export const StyledInput = styled.input.withConfig({
   color: ${({ theme }) => theme.color.textPrimary};
   font-size: ${({ theme }) => theme.fontSize.body};
   font-weight: ${({ theme }) => theme.fontWeight.regular};
+  letter-spacing: ${({ theme }) => theme.letterSpacing.xs};
 
   &:hover,
   &:focus {

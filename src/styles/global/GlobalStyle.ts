@@ -9,7 +9,6 @@ export const GlobalStyle = createGlobalStyle`
     font-family: "__inter_20b187", "__inter_Fallback_20b187", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     font-feature-settings: "ss03", "cv02", "cv11";
     scroll-behavior: smooth;
-    
   }
 
   ::-webkit-scrollbar {

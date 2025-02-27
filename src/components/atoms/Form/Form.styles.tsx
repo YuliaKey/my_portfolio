@@ -6,6 +6,7 @@ export const StyledForm = styled.form<FormProps>`
   display: flex;
   flex-direction: column;
   gap: ${({ theme }) => theme.spacing.sm};
-  max-width: 500px;
+  width: 100%;
+  max-width: 600px;
   margin: 0 auto;
 `;

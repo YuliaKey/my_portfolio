@@ -2,7 +2,7 @@ import React from "react";
 import { useTheme } from "styled-components";
 
 export const Moon: React.FC<{ size?: string; color?: string }> = ({
-  size = "24",
+  size = "1rem",
   color,
 }) => {
   const theme = useTheme();

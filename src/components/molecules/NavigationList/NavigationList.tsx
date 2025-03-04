@@ -5,6 +5,7 @@ import React, {
   useRef,
   useState,
 } from "react";
+import { useMediaQuery } from "react-responsive";
 import { useTranslation } from "react-i18next";
 import { useTheme } from "styled-components";
 
@@ -16,6 +17,8 @@ export const NavigationList: React.FC = () => {
   const { t }: { t: (key: string) => string } = useTranslation();
   const theme = useTheme();
   const { spacing, transition } = theme;
+
+  const isBigScreen = useMediaQuery({ query: "(min-width: 1440px)" });
 
   const [selectedItem, setSelectedItem] = useState<number>(0);
   const isManualScroll = useRef(false);
@@ -53,6 +56,7 @@ export const NavigationList: React.FC = () => {
    * Sets up an Intersection Observer to detect which section is currently in view.
    */
   useEffect(() => {
+    const dynamicThreshold = isBigScreen ? 0.5 : 0.3;
     observerRef.current = new IntersectionObserver(
       (entries) => {
         if (isManualScroll.current) return;
@@ -70,7 +74,8 @@ export const NavigationList: React.FC = () => {
       },
       {
         root: null,
-        threshold: 0.4,
+        threshold: dynamicThreshold,
+        rootMargin: "-30% 0px 0px 0px",
       }
     );
 

@@ -14,8 +14,8 @@ export const StyledProjectImage = styled.img.withConfig({
   border-width: 2px;
   transition: ${({ theme }) => theme.transition.smooth};
   aspect-ratio: 16 / 9;
-  border-color: ${({ hovered }) =>
-    hovered ? "rgba(226, 232, 240, 0.3)" : "rgba(226, 232, 240, 0.1)"};
+  border-color: ${({ hovered, theme }) =>
+    hovered ? theme.color.textPrimary30 : theme.color.textPrimary10};
 
   @media (min-width: 640px) {
     grid-column: span 2 / span 2;

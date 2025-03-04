@@ -4,4 +4,5 @@ export interface Project {
   TECHNOLOGIES: string[];
   IMAGE_ALT: string;
   IMAGE_SRC: string;
+  PROJECT_LINK: string;
 }

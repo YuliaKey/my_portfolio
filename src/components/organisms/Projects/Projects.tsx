@@ -28,7 +28,14 @@ export const Projects: React.FC = () => {
         <List as="ol">
           {projects.map(
             (
-              { NAME, DESCRIPTION, IMAGE_ALT, TECHNOLOGIES, IMAGE_SRC },
+              {
+                NAME,
+                DESCRIPTION,
+                IMAGE_ALT,
+                TECHNOLOGIES,
+                IMAGE_SRC,
+                PROJECT_LINK,
+              },
               index
             ) => (
               <ListItem
@@ -41,6 +48,7 @@ export const Projects: React.FC = () => {
                   technologies={TECHNOLOGIES}
                   imageAlt={IMAGE_ALT}
                   imageSrc={IMAGE_SRC}
+                  projectLink={PROJECT_LINK}
                   hovered={hoveredCard === index}
                   onMouseOver={() => setHoveredCard(index)}
                   onMouseLeave={() => setHoveredCard(null)}

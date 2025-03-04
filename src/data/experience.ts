@@ -5,8 +5,15 @@ import { Experience } from "src/types/experience";
 export const useExperienceData = (): Experience[] => {
   const { t } = useTranslation();
 
-  return t("EXPERIENCES", {
+  const experiences = t("EXPERIENCES", {
     returnObjects: true,
     defaultValue: [],
-  }) as Experience[];
+  }) as Omit<Experience, "COMPANY_LINK">[];
+
+  const companyLinks = ["https://www.cma-cgm.com/"];
+
+  return experiences.map((experience, index) => ({
+    ...experience,
+    COMPANY_LINK: companyLinks[index] || "",
+  }));
 };

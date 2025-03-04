@@ -50,10 +50,13 @@ export type Theme = {
   };
   color: {
     textPrimary: string;
+    textPrimary30: string;
+    textPrimary10: string;
     textSecondary: string;
     textTertiary: string;
     textSelected: string;
     backgroundPrimary: string;
+    backgroundPrimary75: string;
     backgroundSecondary: string;
     backgroundTertiary: string;
     backgroundQuaternary: string;

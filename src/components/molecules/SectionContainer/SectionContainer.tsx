@@ -30,6 +30,7 @@ export const SectionContainer: React.FC<SectionContainerProps> = ({
         <StickyHeader className={className}>
           <Typography
             as="h2"
+            color={theme.color.textPrimary}
             fontSize={theme.fontSize.medium}
             fontWeight={theme.fontWeight.bold}
             letterSpacing={theme.letterSpacing.sm}

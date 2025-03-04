@@ -23,6 +23,7 @@ export type ExperienceCardType = {
   company: string;
   date: string;
   technologies: string[];
+  companyLink: string;
   hovered?: boolean;
   onMouseOver?: () => void;
   onMouseLeave?: () => void;
@@ -34,6 +35,7 @@ export const ExperienceCard: React.FC<ExperienceCardType> = ({
   company,
   date,
   technologies,
+  companyLink,
   hovered,
   onMouseLeave,
   onMouseOver,
@@ -65,7 +67,7 @@ export const ExperienceCard: React.FC<ExperienceCardType> = ({
           lineHeight={theme.lineHeight.sm}
         >
           <Link
-            href="https://www.cma-cgm.com/"
+            href={companyLink}
             target="_blank"
             rel="noreferrer noopener"
             aria-label="CMA CGM (opens in a new tab)"

@@ -1,11 +1,15 @@
+import { useState } from "react";
 import { useMediaQuery } from "react-responsive";
 
 import { Header, MainContent } from "@organisms";
 import { Box } from "@atoms";
+
 import { SpotlightContainer, SpotlightEffect } from "./AppContainer.styles";
-import { useState } from "react";
+import { useThemeContext } from "src/hooks/hooks";
+import { ThemeMode } from "src/context/ThemeContext";
 
 export const AppContainer: React.FC = () => {
+  const { theme } = useThemeContext();
   const isBigScreen = useMediaQuery({ query: "(min-width: 1024px)" });
   const isMediumScreen = useMediaQuery({ query: "(min-width: 768px)" });
 
@@ -23,7 +27,13 @@ export const AppContainer: React.FC = () => {
 
   return (
     <SpotlightContainer onMouseMove={handleMouseMove}>
-      <SpotlightEffect x={position.x} y={position.y} />
+      <SpotlightEffect
+        x={isBigScreen ? position.x : window.innerWidth - 100}
+        y={isBigScreen ? position.y : 50}
+        style={{
+          display: !isBigScreen && theme === ThemeMode.LIGHT ? "none" : "block",
+        }}
+      />
       <Box
         maxWidth="1280px"
         minHeight="100vh"

@@ -4,4 +4,5 @@ export interface Experience {
   DATE: string;
   DESCRIPTION: string;
   TECHNOLOGIES: string[];
+  COMPANY_LINK: string;
 }

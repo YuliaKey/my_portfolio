@@ -70,7 +70,7 @@ export const NavigationList: React.FC = () => {
       },
       {
         root: null,
-        threshold: 1,
+        threshold: 0.4,
       }
     );
 

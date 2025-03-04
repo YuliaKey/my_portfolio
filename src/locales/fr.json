@@ -1,10 +1,15 @@
 {
   "ABOUT": "À PROPOS",
   "ABOUT_PARAGRAPHS": [
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi velit leo, rutrum vel elementum eget, sodales eget ipsum. Mauris bibendum auctor odio, sed tristique tellus. Vivamus sit amet augue lobortis, rhoncus nibh a, consectetur tellus. Etiam at tincidunt est, ac facilisis diam. Suspendisse potenti. Cras metus lacus, dapibus ut pretium eu, rutrum in justo.",
-    "Nulla facilisi. Maecenas eleifend mi in risus finibus eleifend. Donec at massa scelerisque sem euismod accumsan. Mauris tristique urna in nisl pharetra, et tempor libero finibus. Suspendisse pretium molestie nisi, quis interdum felis fringilla vitae.",
-    "Nunc porttitor imperdiet sapien sit amet posuere. Integer non viverra ipsum. Donec suscipit blandit urna, vitae mattis ipsum ultricies et. Quisque volutpat turpis in aliquam condimentum.",
-    "Donec et ante magna. Donec id massa orci. Morbi viverra, dui at sodales volutpat, sem turpis placerat metus, vitae tempus mauris risus lacinia quam. Aliquam convallis mi quis accumsan egestas. Nulla id libero sit amet lectus placerat vestibulum ac eu ipsum."
+  "Je suis une développeuse, spécialisée dans la création d'applications interactives et accessibles. Avec une solide maîtrise des technologies frontend comme React.js, Next.js et TypeScript.",
+
+  "Mes compétences techniques incluent la maîtrise de HTML, CSS, SCSS et des frameworks JavaScript, ainsi qu’une bonne connaissance des technologies backend telles que Node.js, GraphQL, REST et TypeORM. J’ai une expérience pratique en gestion de bases de données avec PostgreSQL, MongoDB et SQLite. De plus, j’ai travaillé avec Docker et mis en place des pipelines CI/CD via GitHub Actions afin d’optimiser les processus de déploiement.",
+  
+  "Au cours de mon parcours professionnel, j'ai travaillé sur une application mobile e-commerce développée avec React et Ionic, où j'ai contribué à la création de composants réutilisables, à l’implémentation de fonctionnalités clés et à l’amélioration de l’accessibilité. J’ai collaboré dans un environnement Agile en utilisant des outils comme Jira et effectué des tests unitaires avec Jest pour garantir la qualité du code.",
+  
+  "Avant de plonger dans le code, j’ai eu une première carrière en tant que pianiste professionnelle, diplômée du conservatoire. Aujourd’hui encore, la musique fait partie de mon quotidien et nourrit ma créativité dans le développement.",
+
+  "Dans mon temps libre, j'aime faire de la randonnée et lire."
   ],
   "CONTACT": "CONTACT",
   "CV_LINK": "Voir le CV complet",
@@ -16,18 +21,11 @@
   "EXPERIENCE": "EXPÉRIANCE",
   "EXPERIENCES": [
     {
-      "TITLE": "Développeuse Web (Apprentie)",
+      "TITLE": "Développeuse Web et Mobile (Apprentie)",
       "COMPANY": "CMA CGM",
       "DATE": "2023 — 2024",
-      "DESCRIPTION": "J'ai travaillé sur des applications web...",
-      "TECHNOLOGIES": ["React", "TypeScript", "JavaScript", "HTML", "CSS"]
-    },
-    {
-      "TITLE": "Ingénieure Logiciel",
-      "COMPANY": "Squad",
-      "DATE": "2023 — 2024",
-      "DESCRIPTION": "J'ai développé des solutions web évolutives...",
-      "TECHNOLOGIES": ["React", "TypeScript", "JavaScript", "HTML"]
+      "DESCRIPTION":"En tant qu’apprentie développeuse web chez CMA CGM, j’ai rejoint l’équipe au début d’une importante migration de projet, passant d’Angular à Ionic React tout en mettant en place un tout nouveau design. Mon rôle était de contribuer au développement d’une application mobile e-commerce, en garantissant une expérience utilisateur de haute qualité et des performances optimales. J’étais responsable du développement et de la maintenance de composants React réutilisables, de l’implémentation de nouvelles fonctionnalités et de l’optimisation de l’accessibilité de l’application. Travaillant dans un environnement Agile, j’ai collaboré avec des designers, des développeurs backend et des chefs de projet afin d’aligner le développement avec les exigences métier. J’ai participé aux revues de code, au débogage et à l’optimisation des performances pour améliorer la fonctionnalité globale de l’application. De plus, j’ai rédigé des tests unitaires et d’intégration avec Jest et Testing Library afin d’assurer la fiabilité, la maintenabilité et d’éviter les régressions. Mon travail a contribué à améliorer la stabilité globale de l’application.",
+      "TECHNOLOGIES": ["Ionic", "React", "TypeScript", "JavaScript", "HTML", "CSS"]
     }
   ],
   "FULL_NAME": "Nom et prénom",
@@ -40,16 +38,23 @@
   "PROJECTS_LIST": [
     {
       "NAME": "Application City Guide",
-      "DESCRIPTION": "Une application web pour explorer les villes et trouver des attractions touristiques.",
-      "TECHNOLOGIES": ["Typescript", "Next.js"],
-      "IMAGE_ALT": "Page d'accueil de l'application guide de la ville"
+      "DESCRIPTION": "Une application web conçue pour aider les utilisateurs à explorer les villes en fournissant des informations complètes basées sur la localisation. Développée entièrement depuis zéro dans le cadre de mon projet final à WildCodeSchool, cette application permet aux utilisateurs de découvrir des lieux incontournables, des monuments, des restaurants et d’autres attractions. J’ai été responsable de l’ensemble du cycle de développement, de l’analyse des besoins et de l’architecture logicielle à la conception UI/UX et à l’intégration du backend. L’application suit la méthodologie Agile et utilise Trello pour la gestion de projet. Elle offre une interface intuitive, des performances optimisées et un design accessible. De plus, j’ai mis en place des tests unitaires, d’intégration et de bout en bout avec Jest, React Testing Library et Playwright pour garantir la fiabilité et la stabilité du code. L’intégration et le déploiement continus ont été configurés avec GitHub Actions.",
+     "TECHNOLOGIES": ["TypeScript", "Next.js", "React", "MUI", "Node.js", "GraphQL", "TypeORM", "PostgreSQL", "Docker", "Jest", "Playwright"],
+      "IMAGE_ALT": "Page de recherche de l'application guide de la ville"
     },
     {
-      "NAME": "Application City Guide 2",
-      "DESCRIPTION": "Une version améliorée de l'application Guide de la Ville avec plus de fonctionnalités.",
-      "TECHNOLOGIES": ["Typescript", "Next.js", "Docker"],
-      "IMAGE_ALT": "Page d'accueil de l'application guide de la ville 2"
+      "NAME": "Clone de Twitter",
+      "DESCRIPTION": "Une application web full-stack reproduisant les fonctionnalités essentielles de Twitter, développée avec Node.js, Pug, Bootstrap et MongoDB. Ce projet permet l'authentification des utilisateurs, la création de tweets, les mentions 'J'aime' et les retweets, en suivant le modèle d'interaction typique des réseaux sociaux. Le backend est propulsé par Node.js et Express, avec MongoDB et Mongoose pour la gestion et le stockage des données. Pug est utilisé pour le rendu côté serveur, garantissant une interface utilisateur légère et efficace. Saas est utilisé pour le design en offrant une mise en page responsive. L'application suit l'architecture MVC, mettant l'accent sur un code modulaire et maintenable. Ce clone a été développé afin d'approfondir mes connaissances en développement backend, en gestion de bases de données et en rendu côté serveur.",
+      "TECHNOLOGIES": ["Node.js", "Express", "Pug", "SAAS", "MongoDB", "Mongoose", "JavaScript", "Architecture MVC"],
+      "IMAGE_ALT": "Page de Node Js"
+    },
+    {
+      "NAME": "Quori",
+      "DESCRIPTION": "Quori est une application web inspirée du site Quora, développée avec Symfony. Elle permet aux utilisateurs de poser et répondre à des questions, de voter sur la pertinence des questions et des réponses, ainsi que de rechercher des sujets spécifiques. La plateforme intègre l'authentification des utilisateurs, la gestion du profil et un système de réinitialisation de mot de passe basé sur des tokens. Le backend repose sur Symfony avec Doctrine pour la gestion des bases de données, tandis que le frontend est construit avec Twig et SASS pour le style. Webpack Encore est utilisé pour la gestion des assets, et TypeScript améliore l’interactivité de l’application.",
+      "TECHNOLOGIES": ["PHP", "Symfony", "Twig", "Doctrine", "Webpack Encore", "SASS", "TypeScript", "MySQL"],
+      "IMAGE_ALT": "Image de PHP"
     }
+    
   ],
   "PROJECTS_ARCHIVE_LINK": "Voir l'Archive Complète des Projets",
   "PROJECTS_ARCHIVE_LINK_ARIA_LABEL": "Voir l'archive complète des projets (s'ouvre dans un nouvel onglet)",

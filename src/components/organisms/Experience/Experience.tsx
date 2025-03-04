@@ -32,7 +32,10 @@ export const Experience: React.FC = () => {
       <Box>
         <List as="ol">
           {experiences.map(
-            ({ TITLE, COMPANY, DESCRIPTION, DATE, TECHNOLOGIES }, index) => (
+            (
+              { TITLE, COMPANY, DESCRIPTION, DATE, TECHNOLOGIES, COMPANY_LINK },
+              index
+            ) => (
               <ListItem
                 key={`${TITLE}-${index}`}
                 margin={`0 0 ${theme.spacing.xl} 0`}
@@ -43,6 +46,7 @@ export const Experience: React.FC = () => {
                   date={DATE}
                   description={DESCRIPTION}
                   technologies={TECHNOLOGIES}
+                  companyLink={COMPANY_LINK}
                   hovered={hoveredCard === index}
                   onMouseOver={() => setHoveredCard(index)}
                   onMouseLeave={() => setHoveredCard(null)}

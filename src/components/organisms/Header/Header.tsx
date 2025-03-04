@@ -10,24 +10,19 @@ import {
 } from "@molecules";
 
 import { HeaderContainer } from "./Header.styles";
+import { useMediaQuery } from "react-responsive";
 
 export const Header: React.FC = () => {
-  const {
-    fontSize,
-    fontWeight,
-    lineHeight,
-    letterSpacing,
-    textSecondary,
-    textPrimary,
-    spacing,
-  } = useTheme();
+  const { fontSize, fontWeight, lineHeight, letterSpacing, color, spacing } =
+    useTheme();
+  const isSmallScreen = useMediaQuery({ query: "(max-width: 1024px)" });
 
   const { t }: { t: (key: string) => string } = useTranslation();
 
   return (
     <HeaderContainer>
       <Box>
-        <Link href="/" color={textPrimary}>
+        <Link href="/" color={color.textPrimary}>
           <Typography
             as="h1"
             fontSize={fontSize.h1}
@@ -54,27 +49,51 @@ export const Header: React.FC = () => {
           fontSize={fontSize.body}
           lineHeight={lineHeight.md}
           letterSpacing={letterSpacing.xxs}
-          color={textSecondary}
+          color={color.textSecondary}
           fontWeight={fontWeight.regular}
           opacity="0.8"
         >
           {t("SHORT_DESCRIPTION")}
         </Typography>
-        <SocialLinksList />
-
+        {isSmallScreen ? (
+          <Box
+            display="flex"
+            flexDirection="raw"
+            gap={spacing.sm}
+            justifyContent="space-between"
+            alignItems="center"
+          >
+            <SocialLinksList />
+            <Box
+              display="flex"
+              flexDirection="row"
+              gap={spacing.sm}
+              alignItems="center"
+              justifyContent="flex-start"
+              margin={`${spacing.lg} 0 0 0`}
+            >
+              <ThemeToggle />
+              <LanguageToggle />
+            </Box>
+          </Box>
+        ) : (
+          <SocialLinksList />
+        )}
         <NavigationList />
       </Box>
-      <Box
-        display="flex"
-        flexDirection="row"
-        gap={spacing.sm}
-        alignItems="center"
-        justifyContent="flex-start"
-        margin={`${spacing.lg} 0 0 0`}
-      >
-        <ThemeToggle />
-        <LanguageToggle />
-      </Box>
+      {!isSmallScreen && (
+        <Box
+          display="flex"
+          flexDirection="row"
+          gap={spacing.sm}
+          alignItems="center"
+          justifyContent="flex-start"
+          margin={`${spacing.lg} 0 0 0`}
+        >
+          <ThemeToggle />
+          <LanguageToggle />
+        </Box>
+      )}
     </HeaderContainer>
   );
 };

@@ -23,6 +23,7 @@ export type ProjectCardType = {
   technologies: string[];
   imageSrc: string;
   imageAlt: string;
+  projectLink: string;
   hovered?: boolean;
   onMouseOver?: () => void;
   onMouseLeave?: () => void;
@@ -34,6 +35,7 @@ export const ProjectCard: React.FC<ProjectCardType> = ({
   technologies,
   imageSrc,
   imageAlt,
+  projectLink,
   hovered,
   onMouseLeave,
   onMouseOver,
@@ -68,7 +70,7 @@ export const ProjectCard: React.FC<ProjectCardType> = ({
           lineHeight={theme.lineHeight.sm}
         >
           <Link
-            href="https://www.cma-cgm.com/"
+            href={projectLink}
             target="_blank"
             rel="noreferrer noopener"
             aria-label="CMA CGM (opens in a new tab)"

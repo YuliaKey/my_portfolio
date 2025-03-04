@@ -1,10 +1,15 @@
 {
   "ABOUT": "ABOUT",
   "ABOUT_PARAGRAPHS": [
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi velit leo, rutrum vel elementum eget, sodales eget ipsum. Mauris bibendum auctor odio, sed tristique tellus. Vivamus sit amet augue lobortis, rhoncus nibh a, consectetur tellus. Etiam at tincidunt est, ac facilisis diam. Suspendisse potenti. Cras metus lacus, dapibus ut pretium eu, rutrum in justo.",
-    "Nulla facilisi. Maecenas eleifend mi in risus finibus eleifend. Donec at massa scelerisque sem euismod accumsan. Mauris tristique urna in nisl pharetra, et tempor libero finibus. Suspendisse pretium molestie nisi, quis interdum felis fringilla vitae.",
-    "Nunc porttitor imperdiet sapien sit amet posuere. Integer non viverra ipsum. Donec suscipit blandit urna, vitae mattis ipsum ultricies et. Quisque volutpat turpis in aliquam condimentum.",
-    "Donec et ante magna. Donec id massa orci. Morbi viverra, dui at sodales volutpat, sem turpis placerat metus, vitae tempus mauris risus lacinia quam. Aliquam convallis mi quis accumsan egestas. Nulla id libero sit amet lectus placerat vestibulum ac eu ipsum."
+  "I am a developer specializing in creating interactive and accessible applications, with a good knowledge of frontend technologies such as React.js, Next.js, and TypeScript.",
+
+  "My technical skills include expertise in HTML, CSS, SCSS, and JavaScript frameworks, along with a solid understanding of backend technologies like Node.js, GraphQL, REST, and TypeORM. I have hands-on experience in database management with PostgreSQL, MongoDB, and SQLite. Additionally, I have worked with Docker and implemented CI/CD pipelines using GitHub Actions to optimize deployment processes.",
+
+  "Throughout my professional journey, I have worked on a mobile e-commerce application built with React and Ionic, where I contributed to creating reusable components, implementing key features, and improving accessibility. I collaborated in an Agile environment using tools like Jira and performed unit testing with Jest to ensure code quality.",
+
+  "Before diving into coding, I had a first career as a professional pianist, graduating from the conservatory. Music is still a part of my daily life and continues to fuel my creativity in development.",
+
+  "In my free time, I enjoy hiking and reading."
   ],
   "CONTACT": "CONTACT",
   "CV_LINK": "View Full Résumé",
@@ -17,18 +22,11 @@
   "EXPERIENCE": "EXPERIENCE",
   "EXPERIENCES": [
     {
-      "TITLE": "Web Developer (Apprentice)",
+      "TITLE": "Web and Mobile Developer (Apprentice)",
       "COMPANY": "CMA CGM",
       "DATE": "2023 — 2024",
-      "DESCRIPTION": "I worked on web applications...",
-      "TECHNOLOGIES": ["React", "TypeScript", "JavaScript", "HTML", "CSS"]
-    },
-    {
-      "TITLE": "Software Engineer",
-      "COMPANY": "Squad",
-      "DATE": "2023 — 2024",
-      "DESCRIPTION": "I developed scalable web solutions...",
-      "TECHNOLOGIES": ["React", "TypeScript", "JavaScript", "HTML"]
+      "DESCRIPTION": "As a Web Developer apprentice at CMA CGM, I joined the team at the beginning of a major project migration, transitioning from Angular to Ionic React while implementing a completely new design. My role was to contribute to the development of a mobile e-commerce application, ensuring high-quality user experience and performance. I was responsible for developing and maintaining reusable React components, implementing new features, and optimizing the application for accessibility. Working in an Agile environment, I collaborated with designers, backend developers, and project managers to align development with business requirements. I participated in code reviews, debugging, and performance optimizations to enhance overall functionality. Additionally, I wrote unit and integration tests using Jest and Testing Library to ensure code reliability, maintainability, and prevent regressions. My work helped improve the application's overall stability.",
+      "TECHNOLOGIES": ["Ionic", "React", "TypeScript","MobX", "JavaScript", "HTML", "CSS"]
     }
   ],
   "FULL_NAME": "Full name",
@@ -41,16 +39,22 @@
   "PROJECTS_LIST": [
     {
       "NAME": "City Guide App",
-      "DESCRIPTION": "A web app to explore cities and find tourist attractions.",
-      "TECHNOLOGIES": ["Typescript", "Next.js"],
-      "IMAGE_ALT": "City guide App home page"
+      "DESCRIPTION": "A web app designed to help users explore cities by providing comprehensive location-based information. Developed from scratch as part of my final project at WildCodeSchool, this application allows users to discover key places, landmarks, restaurants, and other attractions. I was responsible for the full development lifecycle, from requirement analysis and software architecture to UI/UX design and backend integration. The app follows Agile methodology, utilizing Trello for project management. It features an intuitive interface, optimized performance, and an accessible design. Additionally, I implemented unit, integration, and end-to-end testing using Jest, React Testing Library, and Playwright to ensure code reliability and stability. Continuous integration and deployment were set up using GitHub Actions.",
+      "TECHNOLOGIES": ["TypeScript", "Next.js", "React", "MUI", "Node.js", "GraphQL", "TypeORM", "PostgreSQL", "Docker", "Jest", "Playwright"],
+      "IMAGE_ALT": "City guide App search page"
     },
     {
-      "NAME": "City Guide App 2",
-      "DESCRIPTION": "An improved version of the City Guide App with more features.",
-      "TECHNOLOGIES": ["Typescript", "Next.js", "Docker"],
-      "IMAGE_ALT": "City guide App home page 2"
-    }
+      "NAME": "Twitter Clone",
+      "DESCRIPTION": "A full-stack web application replicating core Twitter functionalities, built using Node.js, Pug, Bootstrap, and MongoDB. This project provides user authentication, tweet creation, likes, and retweets, following the typical social media interaction model. The backend is powered by Node.js and Express, with MongoDB and Mongoose handling data storage and management. Pug is used for server-side rendering, ensuring a lightweight and efficient UI. Saas used for the styling, providing a responsive design. The project follows the MVC architecture, emphasizing modular and maintainable code. This clone was developed as a way to deepen my understanding of backend development, database interactions, and server-side rendering.",
+      "TECHNOLOGIES": ["Node.js", "Express", "Pug", "SAAS", "MongoDB", "Mongoose", "JavaScript"],
+      "IMAGE_ALT": "Node js picture"
+    },
+    {
+      "NAME": "Quori",
+      "DESCRIPTION": "Quori is a web application inspired by Quora, developed using Symfony. It allows users to ask and answer questions, vote on the relevance of both questions and answers, and search for specific topics. The platform includes user authentication, profile management, and a password reset system with token-based authentication. The backend is powered by Symfony with Doctrine for database management, while the frontend is built using Twig and SASS for styling. Webpack Encore is used for asset management, and TypeScript enhances the interactivity of the application.",
+      "TECHNOLOGIES": ["PHP", "Symfony", "Twig", "Doctrine", "Webpack Encore", "SASS", "TypeScript", "MySQL"],
+      "IMAGE_ALT": "PHP picture"    
+    }    
   ],
   "PROJECTS_ARCHIVE_LINK": "View Full Project Archive",
   "PROJECTS_ARCHIVE_LINK_ARIA_LABEL": "View Full Project Archive (Opens in a new tab)",

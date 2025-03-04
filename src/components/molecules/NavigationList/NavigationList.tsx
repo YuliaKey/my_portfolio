@@ -88,7 +88,7 @@ export const NavigationList: React.FC = () => {
     return () => {
       observerRef.current?.disconnect();
     };
-  }, [menuItems, selectedItem]);
+  }, [menuItems, selectedItem, isBigScreen]);
 
   return (
     <NavigationListContainer>
